@@ -39,7 +39,21 @@ h2{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:1.5rem}
 .nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.3rem 5vw;color:var(--cream);transition:background .5s,padding .5s,color .5s}
 .nav.solid{background:rgba(42,31,24,.92);backdrop-filter:blur(14px);padding:.8rem 5vw}
 .brand{display:flex;align-items:center;gap:.7rem;font:400 1.7rem var(--serif);letter-spacing:.04em}
-.brand img{height:34px}.brand em{color:var(--gold)}
+.brand img {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand em {
+  color: var(--gold);
+}
+
+@media (max-width: 768px) {
+  .brand img {
+    height: 42px;
+  }
+}
 #menu{display:flex;gap:2.2rem;font-size:.9rem}
 #menu a{position:relative;padding:.3rem 0}
 #menu a:after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
@@ -219,7 +233,7 @@ dd a:hover{color:var(--gold-d)}
 
 <header class="nav" id="nav">
   <a class="brand" href="#top" aria-label="Dea Dent">
-    <img src="images/logo.png" alt="" onerror="this.remove()"><!-- REPLACE: images/logo.png -->
+    <img src="https://i.imgur.com/Zj3JQW6.png" alt="" onerror="this.remove()">
     <span>Dea <em>Dent</em></span>
   </a>
   <nav id="menu" aria-label="Main">
