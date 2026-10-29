@@ -9,7 +9,7 @@
 <link rel="canonical" href="https://www.dea-dent.mk/">
 <meta property="og:title" content="Dea Dent | Gostivar">
 <meta property="og:description" content="Ortodonci &amp; Estetikë Dentare. Doc. Dr. Sci. Zumri Bitri.">
-<meta property="og:image" content="images/hero.jpg">
+<meta property="og:image" content="logo.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Dentist","name":"Dea Dent","telephone":"+38942550590","email":"dr.zumri@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Str. Ilindenska 144a/1","addressLocality":"Gostivar","addressCountry":"MK"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -35,7 +35,7 @@ h2{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:1.5rem}
 .note{font-size:.85rem;opacity:.65;margin-top:1.5rem;max-width:60ch}
 .warn{margin-top:1.5rem;padding:1rem 1.2rem;border-left:2px solid var(--gold);font-size:.88rem;color:var(--gold)}
 
-/* nav */
+
 .nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.3rem 5vw;color:var(--cream);transition:background .5s,padding .5s,color .5s}
 .nav.solid{background:rgba(42,31,24,.92);backdrop-filter:blur(14px);padding:.8rem 5vw}
 .brand{display:flex;align-items:center;gap:.7rem;font:400 1.7rem var(--serif);letter-spacing:.04em}
@@ -108,7 +108,7 @@ h2{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:1.5rem}
 }
 
 
-/* buttons */
+
 .btn{display:inline-block;position:relative;overflow:hidden;background:var(--gold);color:var(--esp);border:1px solid var(--gold);padding:1rem 2.2rem;font-size:.9rem;letter-spacing:.06em;cursor:pointer;transition:color .5s,transform .4s var(--ease);z-index:0}
 .btn:before{content:"";position:absolute;inset:0;background:var(--esp);transform:translateY(101%);transition:transform .5s var(--ease);z-index:-1}
 .btn:hover{color:var(--gold)}.btn:hover:before{transform:none}
@@ -120,7 +120,7 @@ h2{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:1.5rem}
 .btn.ghost.dk:hover{color:var(--esp)}
 .cta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
 
-/* hero */
+
 .hero{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;color:var(--cream);background:radial-gradient(ellipse at 70% 20%,#5a4430 0,transparent 55%),radial-gradient(ellipse at 15% 90%,#4a3626 0,transparent 50%),var(--esp);overflow:hidden}
 .hero-bg{position:absolute;inset:-6% 0;opacity:.45}
 .hero-bg img,.hero-bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -141,7 +141,7 @@ h2{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:1.5rem}
 .scroll span{display:block;width:1px;height:20px;background:var(--gold);animation:drip 2s infinite}
 @keyframes drip{from{transform:translateY(-20px)}to{transform:translateY(60px)}}
 
-/* image placeholders (swap by adding real files in /images) */
+
 .ph{position:relative;overflow:hidden;background:linear-gradient(145deg,#e8dcc8,#d6c3a3 55%,#c9b08a);display:grid;place-items:center;cursor:zoom-in;margin:0}
 .ph:before{content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,.55);z-index:1;pointer-events:none;transition:inset .6s var(--ease)}
 .ph:hover:before{inset:22px}
@@ -154,7 +154,7 @@ h2{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:1.5rem}
 .link{display:inline-block;margin-top:1.5rem;border-bottom:1px solid var(--gold);padding-bottom:.2rem;transition:color .3s}
 .link:hover{color:var(--gold-d)}
 
-/* treatments */
+
 .tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(205,170,125,.25);border:1px solid rgba(205,170,125,.25);margin-top:3rem}
 .tc{background:var(--esp);padding:2.5rem 2rem;display:flex;flex-direction:column;gap:1rem;min-height:380px;transition:background .6s}
 .tc:hover{background:var(--esp2)}
@@ -165,7 +165,7 @@ h2{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:1.5rem}
 .tc a{font-size:.85rem;border-bottom:1px solid transparent;align-self:flex-start;transition:.4s}
 .tc:hover a{border-color:var(--gold);color:var(--gold)}
 
-/* galleries */
+
 .show{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(150px,20vw,260px);gap:1rem;margin-top:3rem}
 .show .ph:nth-child(1){grid-column:span 4;grid-row:span 2}
 .show .ph:nth-child(2){grid-column:span 2}.show .ph:nth-child(3){grid-column:span 2}
@@ -174,7 +174,7 @@ h2{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:1.5rem}
 .grid .ph{aspect-ratio:4/5}.grid .ph:nth-child(3n+2){aspect-ratio:1;align-self:end}
 .grid.cert{grid-template-columns:repeat(4,1fr)}.grid.cert .ph{aspect-ratio:3/4!important;align-self:auto!important}
 
-/* form */
+
 form{display:grid;gap:1.4rem}
 label span{display:block;font-size:.8rem;letter-spacing:.08em;color:var(--gold);margin-bottom:.2rem}
 input,select,textarea{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(205,170,125,.4);padding:.6rem 0;border-radius:0;transition:border-color .4s}
@@ -183,7 +183,7 @@ input:focus,select:focus,textarea:focus{outline:0;border-color:var(--gold)}
 input:invalid:not(:placeholder-shown){border-color:#c77}
 #status{min-height:1.5rem;color:var(--gold);font-size:.9rem}
 
-/* contact */
+
 .contact{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(2rem,6vw,6rem);align-items:stretch}
 dt{font-size:.8rem;letter-spacing:.08em;color:var(--gold-d);margin-top:1.5rem}
 dd{font:400 1.5rem/1.3 var(--serif)}
@@ -194,7 +194,7 @@ dd a:hover{color:var(--gold-d)}
 .foot .brand{justify-content:center;color:var(--cream)}
 .foot a{color:var(--gold);margin-left:1rem}
 
-/* lightbox */
+
 .lb{position:fixed;inset:0;z-index:100;background:rgba(20,14,10,.96);display:grid;place-items:center;color:var(--cream)}
 .lb[hidden]{display:none}
 .stage{width:min(88vw,900px);height:76vh;display:grid;place-items:center}
@@ -206,7 +206,7 @@ dd a:hover{color:var(--gold-d)}
 .lb button:hover{color:var(--gold)}
 .x{top:1rem;right:1.5rem}.pv{left:1rem}.nx{right:1rem}
 
-/* reveal */
+
 .js .rv{opacity:0;transform:translateY(40px);transition:opacity 1.2s var(--ease),transform 1.2s var(--ease)}
 .js .rv.in{opacity:1;transform:none}
 
@@ -576,7 +576,7 @@ function setLang(l) {
   });
 }
 
-/* Build the interior and diploma galleries from your Imgur links */
+
 $$('[data-gen]').forEach(box => {
   const type = box.dataset.gen;
   const images = IMAGE_SETS[type] || [];
@@ -611,7 +611,7 @@ $$('[data-gen]').forEach(box => {
 
 $$('.portrait b').forEach(b => b.dataset.ph = 'portrait');
 
-/* Doctor portrait */
+
 const doctorImage = $('.portrait img');
 if (doctorImage) {
   doctorImage.src = 'https://i.imgur.com/TcQLthx.jpeg';
@@ -623,7 +623,6 @@ $$('[data-lang]').forEach(b =>
   b.addEventListener('click',() => setLang(b.dataset.lang))
 );
 
-/* Navigation */
 const nav = $('#nav');
 const burger = $('#burger');
 const menu = $('#menu');
@@ -653,7 +652,7 @@ $$('#menu a').forEach(a =>
   a.addEventListener('click',() => toggleMenu(false))
 );
 
-/* Reveal animations */
+
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -668,7 +667,7 @@ $$('.rv').forEach((el,i) => {
   io.observe(el);
 });
 
-/* Gallery lightbox */
+
 const lb = $('#lb');
 const stage = $('#stage');
 const cap = $('#cap');
@@ -748,14 +747,14 @@ lb.addEventListener('touchend',e => {
   if (Math.abs(d) > 50) show(idx + (d < 0 ? 1 : -1));
 });
 
-/* Preselect treatment */
+
 $$('[data-service]').forEach(a =>
   a.addEventListener('click',() => {
     $('#service').value = a.dataset.service;
   })
 );
 
-/* Appointment form */
+
 const form = $('#form');
 const st = $('#status');
 
@@ -806,7 +805,7 @@ form.addEventListener('submit',async e => {
 
 $('#yr').textContent = new Date().getFullYear();
 
-/* Hero video controls */
+
 (function() {
   const v = $('#hv');
   const b = $('#vbtn');
