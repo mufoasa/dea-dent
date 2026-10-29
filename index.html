@@ -6,14 +6,172 @@
 <title>Dea Dent | Ortodonci &amp; Estetikë Dentare, Gostivar</title>
 <meta name="description" content="Dea Dent, klinikë dentare në Gostivar. Ortodonci dhe estetikë dentare nga Doc. Dr. Sci. Zumri Bitri.">
 <meta name="theme-color" content="#2A1F18">
-<link rel="canonical" href="https://www.example.com/"><!-- TODO: replace with real domain -->
+<link rel="canonical" href="https://www.dea-dent.mk/">
 <meta property="og:title" content="Dea Dent | Gostivar">
 <meta property="og:description" content="Ortodonci &amp; Estetikë Dentare. Doc. Dr. Sci. Zumri Bitri.">
 <meta property="og:image" content="images/hero.jpg">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Dentist","name":"Dea Dent","telephone":"+38942550590","email":"dr.zumri@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Str. Ilindenska 144a/1","addressLocality":"Gostivar","addressCountry":"MK"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<style>
+:root{--gold:#CDAA7D;--gold-d:#9c7b52;--ivory:#FBF8F2;--cream:#F2EADD;--white:#fff;--esp:#2A1F18;--esp2:#3a2c22;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font:300 1.05rem/1.75 var(--sans);color:var(--esp);background:var(--ivory);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.skip{position:absolute;left:-999px;background:var(--gold);color:var(--esp);padding:.6rem 1rem;z-index:99}
+.skip:focus{left:1rem;top:1rem}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:1.5rem}
+.it{font-style:italic;color:var(--gold)}
+.wrap{width:min(1180px,90%);margin:auto}
+.sec{padding:clamp(5rem,12vw,10rem) 0}
+.ivory{background:var(--ivory)}.cream{background:var(--cream)}.dark{background:var(--esp);color:var(--cream)}
+.lead{font:300 clamp(1.4rem,2.4vw,1.9rem)/1.4 var(--serif);margin-bottom:1.2rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,7vw,7rem);align-items:start}
+.note{font-size:.85rem;opacity:.65;margin-top:1.5rem;max-width:60ch}
+.warn{margin-top:1.5rem;padding:1rem 1.2rem;border-left:2px solid var(--gold);font-size:.88rem;color:var(--gold)}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.3rem 5vw;color:var(--cream);transition:background .5s,padding .5s,color .5s}
+.nav.solid{background:rgba(42,31,24,.92);backdrop-filter:blur(14px);padding:.8rem 5vw}
+.brand{display:flex;align-items:center;gap:.7rem;font:400 1.7rem var(--serif);letter-spacing:.04em}
+.brand img{height:34px}.brand em{color:var(--gold)}
+#menu{display:flex;gap:2.2rem;font-size:.9rem}
+#menu a{position:relative;padding:.3rem 0}
+#menu a:after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+#menu a:hover:after{transform:scaleX(1);transform-origin:left}
+.tools{display:flex;align-items:center;gap:1rem}
+.lang button{background:none;border:0;padding:.3rem .45rem;font-size:.78rem;cursor:pointer;opacity:.6;letter-spacing:.08em}
+.lang button[aria-pressed=true]{opacity:1;color:var(--gold)}
+.burger{display:none;background:none;border:0;width:36px;height:36px;position:relative;cursor:pointer}
+.burger i{position:absolute;left:6px;right:6px;height:1px;background:currentColor;transition:.4s}
+.burger i:first-child{top:13px}.burger i:last-child{top:22px}
+.burger[aria-expanded=true] i:first-child{top:18px;transform:rotate(45deg)}
+.burger[aria-expanded=true] i:last-child{top:18px;transform:rotate(-45deg)}
+
+/* buttons */
+.btn{display:inline-block;position:relative;overflow:hidden;background:var(--gold);color:var(--esp);border:1px solid var(--gold);padding:1rem 2.2rem;font-size:.9rem;letter-spacing:.06em;cursor:pointer;transition:color .5s,transform .4s var(--ease);z-index:0}
+.btn:before{content:"";position:absolute;inset:0;background:var(--esp);transform:translateY(101%);transition:transform .5s var(--ease);z-index:-1}
+.btn:hover{color:var(--gold)}.btn:hover:before{transform:none}
+.btn.sm{padding:.6rem 1.3rem;font-size:.8rem}
+.btn.ghost{background:transparent;color:inherit;border-color:rgba(205,170,125,.6)}
+.btn.ghost:before{background:var(--gold)}.btn.ghost:hover{color:var(--esp)}
+.dark .btn:before,.hero .btn:before,.nav .btn:before{background:var(--ivory)}
+.btn.dk{color:var(--esp)}.btn.dk:hover{color:var(--gold)}
+.btn.ghost.dk:hover{color:var(--esp)}
+.cta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;color:var(--cream);background:radial-gradient(ellipse at 70% 20%,#5a4430 0,transparent 55%),radial-gradient(ellipse at 15% 90%,#4a3626 0,transparent 50%),var(--esp);overflow:hidden}
+.hero-bg{position:absolute;inset:-6% 0;opacity:.45}
+.hero-bg img,.hero-bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-bg:has(video.on){opacity:.7}
+.vbtn{position:absolute;right:5vw;bottom:2rem;z-index:3;width:42px;height:42px;border-radius:50%;background:rgba(42,31,24,.5);border:1px solid var(--gold);color:var(--gold);font-size:.7rem;cursor:pointer;transition:background .4s,color .4s}
+.vbtn:hover{background:var(--gold);color:var(--esp)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,31,24,.5),rgba(42,31,24,.2) 40%,var(--esp));pointer-events:none}
+.hero-in{position:relative;z-index:2;padding:8rem 5vw 6rem;max-width:1000px}
+.kicker{font-size:.85rem;letter-spacing:.2em;color:var(--gold);margin-bottom:2rem;opacity:0;animation:up 1.2s .2s var(--ease) forwards}
+.hero h1{font-size:clamp(3.2rem,9.5vw,8rem);font-weight:300;opacity:0;animation:up 1.4s .4s var(--ease) forwards}
+.arc{width:min(520px,70%);margin:.4rem auto 0;display:block;overflow:visible}
+.arc path{fill:none;stroke:var(--gold);stroke-width:1.5;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.4s 1.1s var(--ease) forwards}
+.sub{max-width:52ch;margin:1.8rem auto 0;opacity:0;animation:up 1.2s 1.8s var(--ease) forwards;color:rgba(242,234,221,.8)}
+.hero .cta{justify-content:center;opacity:0;animation:up 1.2s 2.1s var(--ease) forwards}
+@keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes draw{to{stroke-dashoffset:0}}
+.scroll{position:absolute;bottom:2rem;left:50%;z-index:2;width:1px;height:60px;background:rgba(205,170,125,.3);overflow:hidden}
+.scroll span{display:block;width:1px;height:20px;background:var(--gold);animation:drip 2s infinite}
+@keyframes drip{from{transform:translateY(-20px)}to{transform:translateY(60px)}}
+
+/* image placeholders (swap by adding real files in /images) */
+.ph{position:relative;overflow:hidden;background:linear-gradient(145deg,#e8dcc8,#d6c3a3 55%,#c9b08a);display:grid;place-items:center;cursor:zoom-in;margin:0}
+.ph:before{content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,.55);z-index:1;pointer-events:none;transition:inset .6s var(--ease)}
+.ph:hover:before{inset:22px}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.ph:hover img{transform:scale(1.06)}
+.ph b{font:italic 300 1.4rem var(--serif);color:rgba(42,31,24,.45);z-index:0}
+.portrait{aspect-ratio:4/5}
+.doc{display:grid;grid-template-columns:5fr 6fr;gap:clamp(2rem,7vw,6rem);align-items:center}
+.role{font:italic 1.5rem var(--serif);color:var(--gold-d);margin-bottom:1rem}
+.link{display:inline-block;margin-top:1.5rem;border-bottom:1px solid var(--gold);padding-bottom:.2rem;transition:color .3s}
+.link:hover{color:var(--gold-d)}
+
+/* treatments */
+.tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(205,170,125,.25);border:1px solid rgba(205,170,125,.25);margin-top:3rem}
+.tc{background:var(--esp);padding:2.5rem 2rem;display:flex;flex-direction:column;gap:1rem;min-height:380px;transition:background .6s}
+.tc:hover{background:var(--esp2)}
+.tc h3{font-size:2rem;color:var(--gold)}
+.tc ul{list-style:none;flex:1}
+.tc li{padding:.7rem 0;border-bottom:1px solid rgba(205,170,125,.18);opacity:.85;font-size:.98rem;transition:padding .5s var(--ease),color .4s}
+.tc li:hover{padding-left:.6rem;color:var(--gold)}
+.tc a{font-size:.85rem;border-bottom:1px solid transparent;align-self:flex-start;transition:.4s}
+.tc:hover a{border-color:var(--gold);color:var(--gold)}
+
+/* galleries */
+.show{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(150px,20vw,260px);gap:1rem;margin-top:3rem}
+.show .ph:nth-child(1){grid-column:span 4;grid-row:span 2}
+.show .ph:nth-child(2){grid-column:span 2}.show .ph:nth-child(3){grid-column:span 2}
+.show .ph:nth-child(4){grid-column:span 6}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:3rem}
+.grid .ph{aspect-ratio:4/5}.grid .ph:nth-child(3n+2){aspect-ratio:1;align-self:end}
+.grid.cert{grid-template-columns:repeat(4,1fr)}.grid.cert .ph{aspect-ratio:3/4!important;align-self:auto!important}
+
+/* form */
+form{display:grid;gap:1.4rem}
+label span{display:block;font-size:.8rem;letter-spacing:.08em;color:var(--gold);margin-bottom:.2rem}
+input,select,textarea{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(205,170,125,.4);padding:.6rem 0;border-radius:0;transition:border-color .4s}
+select option{color:var(--esp)}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--gold)}
+input:invalid:not(:placeholder-shown){border-color:#c77}
+#status{min-height:1.5rem;color:var(--gold);font-size:.9rem}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(2rem,6vw,6rem);align-items:stretch}
+dt{font-size:.8rem;letter-spacing:.08em;color:var(--gold-d);margin-top:1.5rem}
+dd{font:400 1.5rem/1.3 var(--serif)}
+dd a:hover{color:var(--gold-d)}
+.map{min-height:420px;filter:sepia(.35) saturate(.8);border:1px solid var(--gold);padding:10px}
+.map iframe{width:100%;height:100%;min-height:400px;border:0}
+.foot{background:#1d1510;color:rgba(242,234,221,.7);text-align:center;padding:4rem 5vw;display:grid;gap:1rem;font-size:.9rem}
+.foot .brand{justify-content:center;color:var(--cream)}
+.foot a{color:var(--gold);margin-left:1rem}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(20,14,10,.96);display:grid;place-items:center;color:var(--cream)}
+.lb[hidden]{display:none}
+.stage{width:min(88vw,900px);height:76vh;display:grid;place-items:center}
+.stage img{max-width:100%;max-height:100%;object-fit:contain;animation:fade .5s}
+.stage div{width:min(70vw,520px);aspect-ratio:4/5;display:grid;place-items:center;background:linear-gradient(145deg,#e8dcc8,#c9b08a);color:rgba(42,31,24,.5);font:italic 1.6rem var(--serif)}
+@keyframes fade{from{opacity:0;transform:scale(.98)}}
+#cap{position:absolute;bottom:1.5rem;font:italic 1.2rem var(--serif);color:var(--gold)}
+.lb button{position:absolute;background:none;border:0;color:var(--cream);font-size:3rem;cursor:pointer;padding:1rem;line-height:1}
+.lb button:hover{color:var(--gold)}
+.x{top:1rem;right:1.5rem}.pv{left:1rem}.nx{right:1rem}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(40px);transition:opacity 1.2s var(--ease),transform 1.2s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+
+@media(max-width:980px){
+ .tgrid{grid-template-columns:1fr 1fr}.grid.cert{grid-template-columns:1fr 1fr}
+ .split,.doc,.contact{grid-template-columns:1fr}
+ .burger{display:block}.nav .btn.sm{display:none}
+ #menu{position:fixed;inset:0;background:var(--esp);flex-direction:column;justify-content:center;align-items:center;gap:1.6rem;font:300 2.4rem var(--serif);transform:translateY(-100%);transition:transform .7s var(--ease);z-index:-1}
+ #menu.open{transform:none}
+}
+@media(max-width:640px){
+ body{font-size:1rem}
+ .tgrid,.grid{grid-template-columns:1fr}.grid .ph,.grid .ph:nth-child(3n+2){aspect-ratio:4/5;align-self:auto}
+ .show{grid-template-columns:1fr 1fr}.show .ph:nth-child(n){grid-column:span 2;grid-row:auto}
+ .grid.cert{grid-template-columns:1fr 1fr}
+ .brand{font-size:1.4rem}.tools{gap:.3rem}
+}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.arc path{stroke-dashoffset:0}.kicker,.hero h1,.sub,.hero .cta{opacity:1}}
+
+</style>
 </head>
 <body>
 <a class="skip" href="#main" data-i="skip">Kalo te përmbajtja</a>
@@ -39,21 +197,63 @@
   </div>
 </header>
 
-<main id="main">
+
 <section class="hero" id="top">
-  <div class="hero-bg"><img src="images/hero.jpg" alt="" fetchpriority="high" onerror="this.remove()"><!-- poster / fallback: images/hero.jpg -->
-    <video id="hv" autoplay muted loop playsinline preload="auto" poster="images/hero.jpg" aria-hidden="true"><!-- REPLACE: images/hero.mp4 (and optional hero.webm) -->
-      <source src="images/hero.webm" type="video/webm"><source src="images/hero.mp4" type="video/mp4"></video></div>
-  <button class="vbtn" id="vbtn" aria-label="Pause video" hidden>❚❚</button>
-  <div class="hero-in">
-    <p class="kicker" data-i="h_kick">Ortodonci &amp; Estetikë Dentare · Gostivar</p>
-    <h1><span data-i="h_t1">Arti i një</span><br><span class="it" data-i="h_t2">buzëqeshjeje të përsosur</span></h1>
-    <svg class="arc" viewBox="0 0 600 70" aria-hidden="true"><path d="M10 12 Q300 100 590 12" pathLength="1"/></svg>
-    <p class="sub" data-i="h_sub">Kujdes i përkushtuar dhe precizion i qetë, nën drejtimin e Doc. Dr. Sci. Zumri Bitri.</p>
-    <div class="cta"><a class="btn" href="#book" data-i="n_book">Cakto vizitë</a><a class="btn ghost" href="#treatments" data-i="h_cta2">Zbulo trajtimet</a></div>
+  <div class="hero-bg">
+    <video
+      id="hv"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      aria-hidden="true"
+    >
+      <source src="deahero.mp4" type="video/mp4">
+    </video>
   </div>
-  <a class="scroll" href="#about" aria-label="Scroll"><span></span></a>
+
+  <button class="vbtn" id="vbtn" aria-label="Pause video" hidden>
+    ❚❚
+  </button>
+
+  <div class="hero-in">
+    <p class="kicker" data-i="h_kick">
+      Ortodonci &amp; Estetikë Dentare · Gostivar
+    </p>
+
+    <h1>
+      <span data-i="h_t1">Arti i një</span><br>
+      <span class="it" data-i="h_t2">
+        buzëqeshjeje të përsosur
+      </span>
+    </h1>
+
+    <svg class="arc" viewBox="0 0 600 70" aria-hidden="true">
+      <path d="M10 12 Q300 100 590 12" pathLength="1"/>
+    </svg>
+
+    <p class="sub" data-i="h_sub">
+      Kujdes i përkushtuar dhe precizion i qetë,
+      nën drejtimin e Doc. Dr. Sci. Zumri Bitri.
+    </p>
+
+    <div class="cta">
+      <a class="btn" href="#book" data-i="n_book">
+        Cakto vizitë
+      </a>
+
+      <a class="btn ghost" href="#treatments" data-i="h_cta2">
+        Zbulo trajtimet
+      </a>
+    </div>
+  </div>
+
+  <a class="scroll" href="#about" aria-label="Scroll">
+    <span></span>
+  </a>
 </section>
+
 
 <section class="sec ivory" id="about">
   <div class="wrap split">
@@ -145,6 +345,454 @@
   <div class="stage" id="stage"></div><p id="cap"></p>
   <button class="nx" data-lb-act="next" aria-label="Next">›</button>
 </div>
-<script src="script.js"></script>
+
+<script>
+'use strict';
+
+const FORM_ENDPOINT = '';
+const CLINIC_EMAIL = 'dr.zumri@gmail.com';
+const IMG = 'images/';
+
+const IMAGE_SETS = {
+  interior: [
+    'https://i.imgur.com/8IqZKJt.jpeg',
+    'https://i.imgur.com/tbSe16Z.jpeg',
+    'https://i.imgur.com/L5mhefN.jpeg'
+  ],
+  gallery: ['https://i.imgur.com/dtA7Ccs.jpeg',
+  'https://i.imgur.com/fA2Okga.jpeg',
+  'https://i.imgur.com/STuyWwk.jpeg',
+  'https://i.imgur.com/Y7gAcJJ.jpeg',
+  'https://i.imgur.com/oyMs38c.jpeg',
+  'https://i.imgur.com/7d9X7YG.jpeg',
+  ],
+  diploma: [
+    
+    'https://i.imgur.com/KBJU8cH.png',
+    'https://i.imgur.com/HNFnJm1.jpeg'
+  ]
+};
+
+const T = {
+sq:{
+skip:'Kalo te përmbajtja',
+n_about:'Klinika',n_doc:'Doktori',n_treat:'Trajtimet',
+n_gal:'Galeria',n_contact:'Kontakti',n_book:'Cakto vizitë',
+h_kick:'Ortodonci & Estetikë Dentare · Gostivar',
+h_t1:'Zbardhim',h_t2:'buzëqeshjeje të përsosur',
+h_sub:'Kujdes i përkushtuar dhe precizion i qetë, nën drejtimin e Doc. Dr. Sci. Zumri Bitri.',
+h_cta2:'Zbulo trajtimet',
+a_t:'Një hapësirë ku qetësia takon shkencën',
+a_p1:'Dea Dent është klinikë dentare në Gostivar e kushtuar ortodoncisë dhe estetikës dentare.',
+a_p2:"Çdo trajtim planifikohet individualisht, me kohë për t'ju dëgjuar dhe për t'ju shpjeguar çdo hap.",
+d_role:'Ortodonci & Estetikë Dentare',
+d_p:'Biografia, formimi profesional dhe përvoja do të shtohen këtu pas marrjes së të dhënave dhe dokumenteve zyrtare nga doktori.',
+d_link:'Shiko diplomat dhe certifikatat',
+t_t:'Trajtimet',
+t1:'Zbardhim & Endodonci',i11:'Endodonci',i12:'Zbardhim me lazer',i13:'Zbardhim në shtëpi',
+t2:'Ortodonci',i21:'Aparate fikse',i22:'Aparate mobile',i23:'Invisalign',
+t3:'Protetikë',i31:'Kurorë qeramike',i32:'Zirkon',i33:'Elemente CAD-CAM',i34:'Kurorë e.max',
+t4:'Kirurgji & Estetikë',i41:'Implante dentare',i42:'Botox & mbushës dermal',
+t_ask:'Kërko konsultë',
+t_note:'Lista e trajtimeve është orientuese dhe do të përditësohet nga klinika.',
+c_t:'Brenda klinikës',g_t:'Galeria',
+cert_t:'Diploma dhe certifikata',
+cert_note:'Dokumentet zyrtare do të ngarkohen këtu. Asnjë kredencial nuk shfaqet pa dokument.',
+f_t:'Cakto vizitën tuaj',
+f_p:"Plotësoni formularin dhe klinika do t'ju kontaktojë për të konfirmuar terminin.",
+f_warn:'Për dërgim automatik duhet lidhur një backend ose shërbim formularësh. Pa të, formulari hap email-in tuaj me të dhënat e plotësuara.',
+f_name:'Emri dhe mbiemri',f_phone:'Telefoni',f_email:'Email',
+f_service:'Shërbimi',f_date:'Data e preferuar',f_msg:'Mesazh',
+f_send:'Dërgo kërkesën',
+s_req:'Ju lutemi plotësoni emrin dhe telefonin.',
+s_mail:'Po hapet email-i juaj. Shtypni "Dërgo" për ta përfunduar kërkesën.',
+s_ok:'Faleminderit! Kërkesa u dërgua.',
+s_err:'Dërgimi dështoi. Telefononi +389 (0)42 550 590.',
+k_t:'Na vizitoni',k_addr:'Adresa',k_phone:'Telefoni',
+k_call:'Telefono',k_dir:'Merr drejtimet',
+rights:'Të gjitha të drejtat e rezervuara.',top:'Kthehu lart',
+ph_portrait:'Portreti',ph_interior:'Interier',ph_gallery:'Foto',ph_diploma:'Dokument'
+},
+mk:{
+skip:'Прескокни до содржината',
+n_about:'Клиника',n_doc:'Докторот',n_treat:'Третмани',
+n_gal:'Галерија',n_contact:'Контакт',n_book:'Закажи термин',
+h_kick:'Ортодонција & Естетска стоматологија · Гостивар',
+h_t1:'Белење',h_t2:'совршена насмевка',
+h_sub:'Посветена грижа и прецизност под водство на Doc. Dr. Sci. Zumri Bitri.',
+h_cta2:'Истражете ги третманите',
+a_t:'Простор каде што науката се среќава со спокојството',
+a_p1:'Dea Dent е стоматолошка клиника во Гостивар посветена на ортодонција и естетска стоматологија.',
+a_p2:'Секој третман се планира индивидуално, со време за разговор и објаснување на секој чекор.',
+d_role:'Ортодонција и естетска стоматологија',
+d_p:'Биографијата и професионалното искуство ќе бидат додадени по потврда на официјалните податоци.',
+d_link:'Погледнете дипломи и сертификати',
+t_t:'Третмани',
+t1:'Белење и ендодонција',i11:'Ендодонција',i12:'Ласерско белење',i13:'Домашно белење',
+t2:'Ортодонција',i21:'Фиксни апарати',i22:'Мобилни апарати',i23:'Invisalign',
+t3:'Протетика',i31:'Керамичка круна',i32:'Циркониум',i33:'CAD-CAM елементи',i34:'e.max круна',
+t4:'Хирургија и естетика',i41:'Забни импланти',i42:'Ботокс и дермални филери',
+t_ask:'Побарај консултација',
+t_note:'Листата на третмани е ориентациона и ќе ја потврди клиниката.',
+c_t:'Внатре во клиниката',g_t:'Галерија',
+cert_t:'Дипломи и сертификати',
+cert_note:'Официјалните документи ќе бидат поставени тука.',
+f_t:'Закажете термин',
+f_p:'Пополнете го формуларот и клиниката ќе ве контактира за потврда.',
+f_warn:'За автоматско испраќање е потребна поврзана услуга за формулари. Во спротивно ќе се отвори вашата е-пошта.',
+f_name:'Име и презиме',f_phone:'Телефон',f_email:'Е-пошта',
+f_service:'Услуга',f_date:'Посакуван датум',f_msg:'Порака',
+f_send:'Испрати барање',
+s_req:'Внесете име и телефон.',
+s_mail:'Се отвора вашата е-пошта. Притиснете „Испрати“.',
+s_ok:'Ви благодариме! Барањето е испратено.',
+s_err:'Испраќањето не успеа. Јавете се на +389 (0)42 550 590.',
+k_t:'Посетете нè',k_addr:'Адреса',k_phone:'Телефон',
+k_call:'Јави се',k_dir:'Добиј насоки',
+rights:'Сите права се задржани.',top:'Назад горе',
+ph_portrait:'Портрет',ph_interior:'Ентериер',ph_gallery:'Фото',ph_diploma:'Документ'
+},
+en:{
+skip:'Skip to content',
+n_about:'Clinic',n_doc:'Doctor',n_treat:'Treatments',
+n_gal:'Gallery',n_contact:'Contact',n_book:'Book a visit',
+h_kick:'Orthodontics & Aesthetic Dentistry · Gostivar',
+h_t1:'The art of a',h_t2:'beautiful smile',
+h_sub:'Dedicated care and thoughtful precision with Doc. Dr. Sci. Zumri Bitri.',
+h_cta2:'Explore treatments',
+a_t:'Where calm meets science',
+a_p1:'Dea Dent is a dental clinic in Gostivar focused on orthodontics and aesthetic dentistry.',
+a_p2:'Every treatment is individually planned, with time to listen and explain each step.',
+d_role:'Orthodontics & Aesthetic Dentistry',
+d_p:'Biography and professional experience will be added after the official details are confirmed.',
+d_link:'View diplomas and certificates',
+t_t:'Treatments',
+t1:'Bleaching & Endodontics',i11:'Endodontics',i12:'Laser bleaching',i13:'Home bleaching',
+t2:'Orthodontics',i21:'Fixed braces',i22:'Removable braces',i23:'Invisalign',
+t3:'Prosthetics',i31:'Ceramic crown',i32:'Zirconia',i33:'CAD/CAM elements',i34:'E.max crown',
+t4:'Surgery & Aesthetics',i41:'Dental implants',i42:'Botox & dermal fillers',
+t_ask:'Request a consultation',
+t_note:'Treatment information is indicative and should be confirmed by the clinic.',
+c_t:'Inside the clinic',g_t:'Gallery',
+cert_t:'Diplomas & certificates',
+cert_note:'Official documents will be displayed here.',
+f_t:'Book your visit',
+f_p:'Complete the form and the clinic will contact you to confirm an appointment.',
+f_warn:'Automatic submission requires a connected form service. Otherwise, your email app will open with the details filled in.',
+f_name:'Full name',f_phone:'Phone',f_email:'Email',
+f_service:'Service',f_date:'Preferred date',f_msg:'Message',
+f_send:'Send request',
+s_req:'Please enter your name and phone number.',
+s_mail:'Opening your email app. Press Send to complete your request.',
+s_ok:'Thank you! Your request was sent.',
+s_err:'Sending failed. Please call +389 (0)42 550 590.',
+k_t:'Visit us',k_addr:'Address',k_phone:'Phone',
+k_call:'Call',k_dir:'Get directions',
+rights:'All rights reserved.',top:'Back to top',
+ph_portrait:'Portrait',ph_interior:'Interior',ph_gallery:'Photo',ph_diploma:'Document'
+}
+};
+
+const $ = (s,c=document) => c.querySelector(s);
+const $$ = (s,c=document) => [...c.querySelectorAll(s)];
+
+document.documentElement.classList.add('js');
+let lang = 'sq';
+try { lang = localStorage.getItem('dd-lang') || 'sq'; } catch(e) {}
+if (!T[lang]) lang = 'sq';
+
+function setLang(l) {
+  lang = l;
+  try { localStorage.setItem('dd-lang',l); } catch(e) {}
+  document.documentElement.lang = l;
+
+  $$('[data-i]').forEach(el => {
+    const v = T[l][el.dataset.i];
+    if (v) el.textContent = v;
+  });
+
+  $$('[data-lang]').forEach(b =>
+    b.setAttribute('aria-pressed',b.dataset.lang === l)
+  );
+
+  $$('.ph b[data-ph]').forEach(b => {
+    b.textContent = T[l]['ph_' + b.dataset.ph] +
+      (b.dataset.n ? ' ' + b.dataset.n : '');
+  });
+}
+
+/* Build the interior and diploma galleries from your Imgur links */
+$$('[data-gen]').forEach(box => {
+  const type = box.dataset.gen;
+  const images = IMAGE_SETS[type] || [];
+
+  images.forEach((url,i) => {
+    const figure = document.createElement('figure');
+    figure.className = 'ph rv';
+    figure.tabIndex = 0;
+    figure.dataset.lb = '';
+    figure.dataset.cap = `${type} ${i + 1}`;
+
+    const img = document.createElement('img');
+    img.src = url;
+    img.alt = type === 'interior'
+      ? `DEA DENT clinic interior ${i + 1}`
+      : `DEA DENT diploma ${i + 1}`;
+    img.loading = 'lazy';
+
+    const label = document.createElement('b');
+    label.dataset.ph = type;
+    label.dataset.n = i + 1;
+
+    img.onerror = () => {
+      img.remove();
+      label.textContent = T[lang]['ph_' + type] + ' ' + (i + 1);
+    };
+
+    figure.append(img,label);
+    box.appendChild(figure);
+  });
+});
+
+$$('.portrait b').forEach(b => b.dataset.ph = 'portrait');
+
+/* Doctor portrait */
+const doctorImage = $('.portrait img');
+if (doctorImage) {
+  doctorImage.src = 'https://i.imgur.com/TcQLthx.jpeg';
+  doctorImage.onerror = () => doctorImage.remove();
+}
+
+setLang(lang);
+$$('[data-lang]').forEach(b =>
+  b.addEventListener('click',() => setLang(b.dataset.lang))
+);
+
+/* Navigation */
+const nav = $('#nav');
+const burger = $('#burger');
+const menu = $('#menu');
+
+const onScroll = () => {
+  nav.classList.toggle('solid',scrollY > 60);
+  const h = $('.hero-bg');
+  if (h && scrollY < innerHeight) {
+    h.style.transform = `translateY(${scrollY * .25}px)`;
+  }
+};
+
+addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+const toggleMenu = o => {
+  menu.classList.toggle('open',o);
+  burger.setAttribute('aria-expanded',o);
+  document.body.style.overflow = o ? 'hidden' : '';
+};
+
+burger.addEventListener('click',() =>
+  toggleMenu(!menu.classList.contains('open'))
+);
+
+$$('#menu a').forEach(a =>
+  a.addEventListener('click',() => toggleMenu(false))
+);
+
+/* Reveal animations */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.12});
+
+$$('.rv').forEach((el,i) => {
+  el.style.transitionDelay = (i % 3) * 90 + 'ms';
+  io.observe(el);
+});
+
+/* Gallery lightbox */
+const lb = $('#lb');
+const stage = $('#stage');
+const cap = $('#cap');
+let items = [], idx = 0, opener = null;
+
+function show(i) {
+  if (!items.length) return;
+  idx = (i + items.length) % items.length;
+  const f = items[idx];
+  const img = $('img',f);
+  stage.innerHTML = '';
+
+  if (img) {
+    const c = document.createElement('img');
+    c.src = img.src;
+    c.alt = img.alt;
+    stage.appendChild(c);
+  } else {
+    const d = document.createElement('div');
+    d.textContent = $('b',f)?.textContent || '';
+    stage.appendChild(d);
+  }
+
+  cap.textContent = f.dataset.cap || '';
+}
+
+function openLb(f) {
+  const group = f.closest('[data-gen]');
+  items = group ? $$('[data-lb]',group) : [f];
+  opener = f;
+  show(items.indexOf(f));
+  lb.hidden = false;
+  document.body.style.overflow = 'hidden';
+  $('.x',lb).focus();
+}
+
+function closeLb() {
+  lb.hidden = true;
+  document.body.style.overflow = '';
+  if (opener) opener.focus();
+}
+
+document.addEventListener('click',e => {
+  const f = e.target.closest('[data-lb]');
+  if (f && !lb.contains(f)) openLb(f);
+
+  const a = e.target.dataset.lbAct;
+  if (a === 'close') closeLb();
+  if (a === 'prev') show(idx - 1);
+  if (a === 'next') show(idx + 1);
+
+  if (e.target === lb || e.target === stage) closeLb();
+});
+
+document.addEventListener('keydown',e => {
+  if (lb.hidden) {
+    if ((e.key === 'Enter' || e.key === ' ') &&
+        e.target.matches?.('[data-lb]')) {
+      e.preventDefault();
+      openLb(e.target);
+    }
+    return;
+  }
+
+  if (e.key === 'Escape') closeLb();
+  if (e.key === 'ArrowLeft') show(idx - 1);
+  if (e.key === 'ArrowRight') show(idx + 1);
+});
+
+let tx = 0;
+lb.addEventListener('touchstart',e => {
+  tx = e.touches[0].clientX;
+},{passive:true});
+
+lb.addEventListener('touchend',e => {
+  const d = e.changedTouches[0].clientX - tx;
+  if (Math.abs(d) > 50) show(idx + (d < 0 ? 1 : -1));
+});
+
+/* Preselect treatment */
+$$('[data-service]').forEach(a =>
+  a.addEventListener('click',() => {
+    $('#service').value = a.dataset.service;
+  })
+);
+
+/* Appointment form */
+const form = $('#form');
+const st = $('#status');
+
+form.addEventListener('submit',async e => {
+  e.preventDefault();
+  const d = Object.fromEntries(new FormData(form));
+
+  if (!d.name.trim() || !d.phone.trim()) {
+    st.textContent = T[lang].s_req;
+    (d.name.trim() ? form.phone : form.name).focus();
+    return;
+  }
+
+  d.service = T[lang][d.service] || d.service;
+  d.language = lang;
+
+  if (FORM_ENDPOINT) {
+    try {
+      const r = await fetch(FORM_ENDPOINT,{
+        method:'POST',
+        headers:{
+          'Content-Type':'application/json',
+          Accept:'application/json'
+        },
+        body:JSON.stringify(d)
+      });
+
+      if (!r.ok) throw new Error('Request failed');
+
+      st.textContent = T[lang].s_ok;
+      form.reset();
+    } catch(e) {
+      st.textContent = T[lang].s_err;
+    }
+  } else {
+    const body =
+      `${T[lang].f_name}: ${d.name}\n` +
+      `${T[lang].f_phone}: ${d.phone}\n` +
+      `${T[lang].f_email}: ${d.email || ''}\n` +
+      `${T[lang].f_service}: ${d.service}\n` +
+      `${T[lang].f_date}: ${d.date || ''}\n\n${d.msg || ''}`;
+
+    st.textContent = T[lang].s_mail;
+    location.href =
+      `mailto:${CLINIC_EMAIL}?subject=${encodeURIComponent('Dea Dent – ' + d.name)}&body=${encodeURIComponent(body)}`;
+  }
+});
+
+$('#yr').textContent = new Date().getFullYear();
+
+/* Hero video controls */
+(function() {
+  const v = $('#hv');
+  const b = $('#vbtn');
+  if (!v || !b) return;
+
+  const rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  v.addEventListener('canplay',() => {
+    v.classList.add('on');
+    b.hidden = false;
+
+    if (rm) {
+      v.pause();
+      b.textContent = '▶';
+      b.setAttribute('aria-label','Play video');
+    }
+  },{once:true});
+
+  b.addEventListener('click',() => {
+    if (v.paused) {
+      v.play().catch(() => {});
+      b.textContent = '❚❚';
+      b.setAttribute('aria-label','Pause video');
+    } else {
+      v.pause();
+      b.textContent = '▶';
+      b.setAttribute('aria-label','Play video');
+    }
+  });
+
+  new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) {
+        v.pause();
+      } else if (!rm && b.textContent === '❚❚') {
+        v.play().catch(() => {});
+      }
+    });
+  }).observe(v);
+})();
+</script>
+
 </body>
 </html>
