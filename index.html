@@ -52,6 +52,47 @@ h2{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:1.5rem}
 .burger i:first-child{top:13px}.burger i:last-child{top:22px}
 .burger[aria-expanded=true] i:first-child{top:18px;transform:rotate(45deg)}
 .burger[aria-expanded=true] i:last-child{top:18px;transform:rotate(-45deg)}
+ 
+@media (max-width: 768px) {
+  #menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(82vw, 340px);
+    height: 100dvh;
+    padding: 100px 30px 40px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+    overflow-y: auto;
+    background: rgba(42, 31, 24, 0.98);
+    z-index: 51;
+  }
+
+  #menu.open {
+    display: flex;
+  }
+
+  #menu a {
+    display: block;
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .burger {
+    display: block;
+    z-index: 52;
+  }
+
+  .nav {
+    z-index: 60;
+  }
+}
+
 
 /* buttons */
 .btn{display:inline-block;position:relative;overflow:hidden;background:var(--gold);color:var(--esp);border:1px solid var(--gold);padding:1rem 2.2rem;font-size:.9rem;letter-spacing:.06em;cursor:pointer;transition:color .5s,transform .4s var(--ease);z-index:0}
