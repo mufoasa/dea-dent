@@ -270,6 +270,21 @@ dd a:hover{color:var(--gold-d)}
 }
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.arc path{stroke-dashoffset:0}.kicker,.hero h1,.sub,.hero .cta{opacity:1}}
 
+
+.foot .credit {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.foot .credit a {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+
 </style>
 </head>
 <body>
@@ -467,11 +482,29 @@ dd a:hover{color:var(--gold-d)}
 </section>
 </main>
 
+
 <footer class="foot">
   <span class="brand"><span>Dea <em>Dent</em></span></span>
-  <p>Str. Ilindenska 144a/1, Gostivar · +389 (0)42 550 590 · dr.zumri@gmail.com</p>
-  <p>© <span id="yr"></span> Dea Dent. <span data-i="rights">Të gjitha të drejtat e rezervuara.</span> <a href="#top" data-i="top">Kthehu lart</a></p>
+
+  <p>
+    Str. Ilindenska 144a/1, Gostivar · +389 (0)42 550 590 · dr.zumri@gmail.com
+  </p>
+
+  <p>
+    © <span id="yr"></span> Dea Dent.
+    <span data-i="rights">Të gjitha të drejtat e rezervuara.</span>
+    <a href="#top" data-i="top">Kthehu lart</a>
+  </p>
+
+  <p class="credit">
+    Designed &amp; Developed by<br>
+    <a href="https://www.instagram.com/muhamedaliiu/"
+       target="_blank"
+       rel="noopener noreferrer">M.A</a>
+  </p>
 </footer>
+
+
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Gallery" hidden>
   <button class="x" data-lb-act="close" aria-label="Close">×</button>
