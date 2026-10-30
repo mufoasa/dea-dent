@@ -153,6 +153,13 @@ h2{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:1.5rem}
 .role{font:italic 1.5rem var(--serif);color:var(--gold-d);margin-bottom:1rem}
 .link{display:inline-block;margin-top:1.5rem;border-bottom:1px solid var(--gold);padding-bottom:.2rem;transition:color .3s}
 .link:hover{color:var(--gold-d)}
+.docs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,4vw,4rem);margin-top:3rem}
+.dcard h3{font-size:clamp(1.6rem,3.2vw,2.8rem);margin:1.6rem 0 .6rem}
+.dcard .role{font-size:clamp(1.1rem,2vw,1.5rem)}
+ .docs{gap:.8rem}
+ .dcard h3{font-size:1.3rem;margin-top:1rem}
+ .dcard .role{font-size:1.05rem}
+ .dcard p:not(.role){font-size:.82rem;line-height:1.6}
 
 
 .tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(205,170,125,.25);border:1px solid rgba(205,170,125,.25);margin-top:3rem}
@@ -308,13 +315,7 @@ dd a:hover{color:var(--gold-d)}
     </p>
 
     <div class="cta">
-      <a class="btn" href="#book" data-i="n_book">
-        Cakto vizitë
-      </a>
-
-      <a class="btn ghost" href="#treatments" data-i="h_cta2">
-        Zbulo trajtimet
-      </a>
+    
     </div>
   </div>
 
@@ -333,14 +334,33 @@ dd a:hover{color:var(--gold-d)}
 </section>
 
 <section class="sec cream" id="doctor">
-  <div class="wrap doc">
-    <figure class="ph portrait rv" data-lb data-cap="Doc. Dr. Sci. Zumri Bitri"><img src="images/doctor.jpg" alt="Doc. Dr. Sci. Zumri Bitri" loading="lazy" onerror="this.remove()"><b>Portrait</b></figure><!-- REPLACE: images/doctor.jpg -->
-    <div class="rv">
-      <h2>Doc. Dr. Sci.<br><span class="it">Zumri Bitri</span></h2>
-      <p class="role" data-i="d_role">Ortodonci &amp; Estetikë Dentare</p>
-      <p data-i="d_p">Biografia, formimi profesional dhe përvoja do të shtohen këtu pas marrjes së të dhënave dhe dokumenteve zyrtare nga doktori.</p>
-      <a class="link" href="#certificates" data-i="d_link">Shiko diplomat dhe certifikatat</a>
+  <div class="wrap">
+    <h2 class="rv" data-i="d_t">Ekipi ynë</h2>
+
+    <div class="docs">
+      <article class="dcard rv">
+        <figure class="ph portrait" data-lb data-cap="Doc. Dr. Sci. Zumri Bitri">
+          <img src="https://i.imgur.com/TcQLthx.jpeg" alt="Doc. Dr. Sci. Zumri Bitri" loading="lazy" onerror="this.remove()">
+          <b data-ph="portrait"></b>
+        </figure>
+        <h3>Doc. Dr. Sci.<br><span class="it">Zumri Bitri</span></h3>
+        <p class="role" data-i="d_role">Ortodonci &amp; Estetikë Dentare</p>
+        <p data-i="d_p">Biografia, formimi profesional dhe përvoja do të shtohen këtu pas marrjes së të dhënave dhe dokumenteve zyrtare nga doktori.</p>
+      </article>
+
+      <article class="dcard rv">
+        <figure class="ph portrait" data-lb data-cap="Dr. Dea Z. Bitri">
+          <!-- REPLACE with her photo URL -->
+          <img src="images/dea.jpg" alt="Dr. Dea Z. Bitri" loading="lazy" onerror="this.remove()">
+          <b data-ph="portrait"></b>
+        </figure>
+        <h3>Dr.<br><span class="it">Dea Z. Bitri</span></h3>
+        <p class="role" data-i="d_role2">Mjeke stomatologe</p>
+        <p data-i="d_p">Biografia, formimi profesional dhe përvoja do të shtohen këtu pas marrjes së të dhënave dhe dokumenteve zyrtare nga doktori.</p>
+      </article>
     </div>
+
+    <a class="link" href="#certificates" data-i="d_link">Shiko diplomat dhe certifikatat</a>
   </div>
 </section>
 
@@ -366,23 +386,6 @@ dd a:hover{color:var(--gold-d)}
   <div class="wrap"><h2 class="rv" data-i="cert_t">Diploma dhe certifikata</h2>
     <p class="note" data-i="cert_note">Dokumentet zyrtare të Dr. Bitri. Asnjë kredencial nuk shfaqet pa dokument.</p>
     <div class="grid cert" data-gen="diploma" data-n="4"></div></div>
-</section>
-
-<section class="sec dark" id="book">
-  <div class="wrap split">
-    <div class="rv"><h2 data-i="f_t">Cakto vizitën tuaj</h2><p data-i="f_p">Plotësoni formularin dhe klinika do t'ju kontaktojë për të konfirmuar terminin.</p>
-      </div>
-    <form id="form" class="rv" novalidate>
-      <label><span data-i="f_name">Emri dhe mbiemri</span><input name="name" required autocomplete="name"></label>
-      <label><span data-i="f_phone">Telefoni</span><input name="phone" type="tel" required autocomplete="tel"></label>
-      <label><span data-i="f_email">Email</span><input name="email" type="email" autocomplete="email"></label>
-      <label><span data-i="f_service">Shërbimi</span><select name="service" id="service"><option value="t1" data-i="t1"></option><option value="t2" data-i="t2"></option><option value="t3" data-i="t3"></option><option value="t4" data-i="t4"></option></select></label>
-      <label><span data-i="f_date">Data e preferuar</span><input name="date" type="date"></label>
-      <label><span data-i="f_msg">Mesazh</span><textarea name="msg" rows="3"></textarea></label>
-      <button class="btn" type="submit" data-i="f_send">Dërgo kërkesën</button>
-      <p id="status" role="status" aria-live="polite"></p>
-    </form>
-  </div>
 </section>
 
 <section class="sec ivory" id="contact">
@@ -480,7 +483,9 @@ s_err:'Dërgimi dështoi. Telefononi +389 (0)42 550 590.',
 k_t:'Na vizitoni',k_addr:'Adresa',k_phone:'Telefoni',
 k_call:'Telefono',k_dir:'Merr drejtimet',
 rights:'Të gjitha të drejtat e rezervuara.',top:'Kthehu lart',
-ph_portrait:'Portreti',ph_interior:'Interier',ph_gallery:'Foto',ph_diploma:'Dokument'
+d_t:'Ekipi ynë', d_role2:'Mjeke stomatologe',
+ph_portrait:'Portreti',ph_interior:'Interier',ph_gallery:'Foto',ph_diploma:'Dokument',
+
 },
 mk:{
 skip:'Прескокни до содржината',
@@ -519,8 +524,10 @@ s_err:'Испраќањето не успеа. Јавете се на +389 (0)42
 k_t:'Посетете нè',k_addr:'Адреса',k_phone:'Телефон',
 k_call:'Јави се',k_dir:'Добиј насоки',
 rights:'Сите права се задржани.',top:'Назад горе',
+d_t:'Нашиот тим', d_role2:'Доктор по стоматологија',
 ph_portrait:'Портрет',ph_interior:'Ентериер',ph_gallery:'Фото',ph_diploma:'Документ'
 },
+
 en:{
 skip:'Skip to content',
 n_about:'Clinic',n_doc:'Doctor',n_treat:'Treatments',
@@ -558,6 +565,7 @@ s_err:'Sending failed. Please call +389 (0)42 550 590.',
 k_t:'Visit us',k_addr:'Address',k_phone:'Phone',
 k_call:'Call',k_dir:'Get directions',
 rights:'All rights reserved.',top:'Back to top',
+d_t:'Our team', d_role2:'Dentist',
 ph_portrait:'Portrait',ph_interior:'Interior',ph_gallery:'Photo',ph_diploma:'Document'
 }
 };
@@ -622,15 +630,6 @@ $$('[data-gen]').forEach(box => {
     box.appendChild(figure);
   });
 });
-
-$$('.portrait b').forEach(b => b.dataset.ph = 'portrait');
-
-
-const doctorImage = $('.portrait img');
-if (doctorImage) {
-  doctorImage.src = 'https://i.imgur.com/TcQLthx.jpeg';
-  doctorImage.onerror = () => doctorImage.remove();
-}
 
 setLang(lang);
 $$('[data-lang]').forEach(b =>
@@ -860,6 +859,7 @@ $('#yr').textContent = new Date().getFullYear();
     });
   }).observe(v);
 })();
+
 </script>
 
 </body>
