@@ -190,6 +190,14 @@ input:focus,select:focus,textarea:focus{outline:0;border-color:var(--gold)}
 input:invalid:not(:placeholder-shown){border-color:#c77}
 #status{min-height:1.5rem;color:var(--gold);font-size:.9rem}
 
+.partners{padding:clamp(3rem,7vw,6rem) 0;overflow:hidden}
+.partners h2{font-size:clamp(1.8rem,3.5vw,2.8rem);text-align:center;margin-bottom:2rem}
+.marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.track{display:flex;align-items:center;gap:clamp(3rem,8vw,7rem);width:max-content;animation:marq 20s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.track img{height:clamp(36px,6vw,64px);width:auto;max-width:none;object-fit:contain;filter:grayscale(1);opacity:.7;transition:filter .4s,opacity .4s}
+.track img:hover{filter:none;opacity:1}
+@keyframes marq{to{transform:translateX(-50%)}}
 
 .contact{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(2rem,6vw,6rem);align-items:stretch}
 dt{font-size:.8rem;letter-spacing:.08em;color:var(--gold-d);margin-top:1.5rem}
@@ -386,6 +394,23 @@ dd a:hover{color:var(--gold-d)}
   <div class="wrap"><h2 class="rv" data-i="cert_t">Diploma dhe certifikata</h2>
     <p class="note" data-i="cert_note">Dokumentet zyrtare të Dr. Bitri. Asnjë kredencial nuk shfaqet pa dokument.</p>
     <div class="grid cert" data-gen="diploma" data-n="4"></div></div>
+</section>
+
+<section class="sec cream partners" id="partners" aria-label="Partners">
+  <div class="wrap">
+    
+  </div>
+  <div class="marquee" aria-hidden="false">
+    <div class="track" id="track">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/NB-Wikipedia-logo-744x248.png" alt="Logo 1" loading="lazy">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Straumann_Logo.svg/3840px-Straumann_Logo.svg.png" alt="Straumann" loading="lazy">
+      <img src="https://nationalorthodontics.com/wp-content/uploads/2020/01/invisalign-1400x400.png.webp" alt="Invisalign" loading="lazy">
+      <img src="https://ormco.co.za/wp-content/uploads/sites/25/2016/03/LOGO_DAMON_SYSTEM-1.png" alt="Damon System" loading="lazy">
+      <img src="https://cdn.dental-tribune.com/dti/0001/9e040e68/cmVzaXplKHc9MTIwMDtoPTYyNzthbmNob3I9Y2VudGVyKTpzaGFycGVuKGxldmVsPTApOm91dHB1dChmb3JtYXQ9cG5nKQ/up/dt/2025/11/Logo_Dentsply_Sirona_BLUE_In_WHITE_500px.png" alt="Damon System" loading="lazy">
+      <img src="https://www.diamodent.com/media/uploads_image/2014/02/11/p18gge715mt591724qn97lmkmc11.png" alt="Logo 1" loading="lazy">
+      
+    </div>
+  </div>
 </section>
 
 <section class="sec ivory" id="contact">
@@ -860,7 +885,19 @@ $('#yr').textContent = new Date().getFullYear();
   }).observe(v);
 })();
 
-</script>
+(function(){
+  const t = $('#track');
+  if (!t) return;
+  const originals = [...t.children];
+  // duplicate once so the loop is seamless (-50% translate)
+  originals.forEach(img => {
+    const c = img.cloneNode(true);
+    c.alt = '';
+    c.setAttribute('aria-hidden','true');
+    t.appendChild(c);
+  });
+})();
 
+</script>
 </body>
 </html>
