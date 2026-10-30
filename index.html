@@ -219,8 +219,22 @@ dd a:hover{color:var(--gold-d)}
 }
 @media(max-width:640px){
  body{font-size:1rem}
- .tgrid,.grid{grid-template-columns:1fr}.grid .ph,.grid .ph:nth-child(3n+2){aspect-ratio:4/5;align-self:auto}
- .show{grid-template-columns:1fr 1fr}.show .ph:nth-child(n){grid-column:span 2;grid-row:auto}
+
+ 
+ .tgrid{grid-template-columns:1fr 1fr}
+ .tc{padding:1.5rem 1rem;min-height:0;gap:.7rem}
+ .tc h3{font-size:1.45rem;line-height:1.1}
+ .tc li{font-size:.85rem;padding:.55rem 0}
+ .tc a{font-size:.78rem}
+
+
+ .grid{grid-template-columns:1fr 1fr;gap:.5rem}
+ .grid .ph,.grid .ph:nth-child(3n+2){aspect-ratio:4/5;align-self:auto}
+ .ph:before{inset:8px}
+ .ph:hover:before{inset:12px}
+
+ .show{grid-template-columns:1fr 1fr}
+ .show .ph:nth-child(n){grid-column:span 2;grid-row:auto}
  .grid.cert{grid-template-columns:1fr 1fr}
  .brand{font-size:1.4rem}.tools{gap:.3rem}
 }
