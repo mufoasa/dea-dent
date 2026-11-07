@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dea Dent | Galeria e punëve</title>
+<meta name="description" content="Galeria e punëve të Dea Dent, Gostivar: ortodonci, implante, protetikë, estetikë, zbardhim dhe endodonci.">
+<meta name="theme-color" content="#2A1F18">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#CDAA7D;--gold-d:#9c7b52;--ivory:#FBF8F2;--cream:#F2EADD;--esp:#2A1F18;--esp2:#3a2c22;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font:300 1.05rem/1.75 var(--sans);color:var(--esp);background:var(--ivory);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.skip{position:absolute;left:-999px;background:var(--gold);color:var(--esp);padding:.6rem 1rem;z-index:99}
+.skip:focus{left:1rem;top:1rem}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:1.5rem}
+.it{font-style:italic;color:var(--gold)}
+.wrap{width:min(1280px,92%);margin:auto}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.3rem 5vw;color:var(--cream);transition:background .5s,padding .5s}
+.nav.solid{background:rgba(42,31,24,.92);backdrop-filter:blur(14px);padding:.8rem 5vw}
+.brand{display:flex;align-items:center;gap:.7rem;font:400 1.7rem var(--serif);letter-spacing:.04em}
+.brand img{height:34px}.brand em{color:var(--gold)}
+#menu{display:flex;gap:2.2rem;font-size:.9rem}
+#menu a{position:relative;padding:.3rem 0}
+#menu a:after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+#menu a:hover:after,#menu a[aria-current]:after{transform:scaleX(1);transform-origin:left}
+#menu a[aria-current]{color:var(--gold)}
+.tools{display:flex;align-items:center;gap:1rem}
+.lang button{background:none;border:0;padding:.3rem .45rem;font-size:.78rem;cursor:pointer;opacity:.6;letter-spacing:.08em}
+.lang button[aria-pressed=true]{opacity:1;color:var(--gold)}
+.burger{display:none;background:none;border:0;width:36px;height:36px;position:relative;cursor:pointer}
+.burger i{position:absolute;left:6px;right:6px;height:1px;background:currentColor;transition:.4s}
+.burger i:first-child{top:13px}.burger i:last-child{top:22px}
+.burger[aria-expanded=true] i:first-child{top:18px;transform:rotate(45deg)}
+.burger[aria-expanded=true] i:last-child{top:18px;transform:rotate(-45deg)}
+
+/* buttons */
+.btn{display:inline-block;position:relative;overflow:hidden;background:var(--gold);color:var(--esp);border:1px solid var(--gold);padding:1rem 2.2rem;font-size:.9rem;letter-spacing:.06em;cursor:pointer;transition:color .5s;z-index:0}
+.btn:before{content:"";position:absolute;inset:0;background:var(--ivory);transform:translateY(101%);transition:transform .5s var(--ease);z-index:-1}
+.btn:hover{color:var(--gold-d)}.btn:hover:before{transform:none}
+.btn.sm{padding:.6rem 1.3rem;font-size:.8rem}
+
+/* page hero */
+.phero{position:relative;text-align:center;color:var(--cream);padding:clamp(9rem,18vw,13rem) 5vw clamp(4rem,8vw,6rem);background:radial-gradient(ellipse at 70% 0,#5a4430 0,transparent 55%),radial-gradient(ellipse at 10% 100%,#4a3626 0,transparent 50%),var(--esp);overflow:hidden}
+.kicker{font-size:.85rem;letter-spacing:.2em;color:var(--gold);margin-bottom:1.6rem;opacity:0;animation:up 1.2s .2s var(--ease) forwards}
+.phero h1{font-size:clamp(3.4rem,10vw,8rem);opacity:0;animation:up 1.4s .4s var(--ease) forwards}
+.arc{width:min(460px,70%);margin:.4rem auto 0;display:block;overflow:visible}
+.arc path{fill:none;stroke:var(--gold);stroke-width:1.5;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.4s 1.1s var(--ease) forwards}
+.sub{max-width:54ch;margin:1.6rem auto 0;color:rgba(242,234,221,.8);opacity:0;animation:up 1.2s 1.7s var(--ease) forwards}
+@keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+/* filters */
+.bar{position:sticky;top:68px;z-index:40;background:rgba(251,248,242,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(205,170,125,.35);transition:top .4s}
+.filters{display:flex;gap:.4rem 2rem;justify-content:center;flex-wrap:wrap;padding:1.1rem 0}
+.filters button{background:none;border:0;border-bottom:1px solid transparent;padding:.35rem 0;cursor:pointer;font-size:.92rem;letter-spacing:.04em;color:var(--esp);opacity:.62;transition:opacity .3s,border-color .4s,color .3s}
+.filters button sup{font-size:.68rem;margin-left:.25rem;color:var(--gold-d)}
+.filters button:hover{opacity:1}
+.filters button[aria-pressed=true]{opacity:1;color:var(--gold-d);border-color:var(--gold)}
+
+/* gallery */
+.gal{padding:clamp(2.5rem,6vw,4.5rem) 0 clamp(4rem,9vw,7rem)}
+.masonry{columns:3;column-gap:1.1rem}
+.item{position:relative;display:block;width:100%;break-inside:avoid;margin:0 0 1.1rem;overflow:hidden;cursor:zoom-in;background:linear-gradient(145deg,#e8dcc8,#d6c3a3 55%,#c9b08a);min-height:220px;border:0;padding:0;text-align:left;animation:fadein .9s var(--ease) both}
+.item.ok{min-height:0;background:#e8dcc8}
+.item img{width:100%;height:auto;transition:transform 1.4s var(--ease),opacity .8s;opacity:0}
+.item.ok img{opacity:1}
+.item:hover img,.item:focus-visible img{transform:scale(1.05)}
+.item:before{content:"";position:absolute;inset:12px;border:1px solid rgba(255,255,255,.6);z-index:2;pointer-events:none;opacity:0;transition:opacity .5s,inset .6s var(--ease)}
+.item:hover:before,.item:focus-visible:before{opacity:1;inset:18px}
+.item figcaption{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:2.2rem 1.4rem 1.1rem;background:linear-gradient(transparent,rgba(42,31,24,.78));color:var(--cream);font:italic 1.2rem var(--serif);transform:translateY(100%);transition:transform .6s var(--ease)}
+.item:hover figcaption,.item:focus-visible figcaption{transform:none}
+@keyframes fadein{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.note{text-align:center;font-size:.85rem;opacity:.65;margin-top:2.5rem}
+
+/* cta */
+.cta{background:var(--esp);color:var(--cream);text-align:center;padding:clamp(4.5rem,10vw,8rem) 5vw}
+.cta h2{margin-bottom:1rem}
+.cta p{max-width:48ch;margin:0 auto 2.2rem;color:rgba(242,234,221,.8)}
+
+.foot{background:#1d1510;color:rgba(242,234,221,.7);text-align:center;padding:4rem 5vw;display:grid;gap:1rem;font-size:.9rem}
+.foot .brand{justify-content:center;color:var(--cream)}
+.foot a{color:var(--gold);margin-left:1rem}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(20,14,10,.96);display:grid;place-items:center;color:var(--cream)}
+.lb[hidden]{display:none}
+.stage{width:min(90vw,1000px);height:78vh;display:grid;place-items:center}
+.stage img{max-width:100%;max-height:100%;object-fit:contain;animation:fade .5s}
+@keyframes fade{from{opacity:0;transform:scale(.98)}}
+#cap{position:absolute;bottom:1.4rem;left:0;right:0;text-align:center;font:italic 1.2rem var(--serif);color:var(--gold)}
+#cap small{display:block;font:300 .8rem var(--sans);letter-spacing:.12em;color:rgba(242,234,221,.6);margin-top:.15rem}
+.lb button{position:absolute;background:none;border:0;color:var(--cream);font-size:3rem;cursor:pointer;padding:1rem;line-height:1}
+.lb button:hover{color:var(--gold)}
+.x{top:1rem;right:1.5rem}.pv{left:1rem}.nx{right:1rem}
+
+@media(max-width:980px){
+ .masonry{columns:2}
+ .burger{display:block}.nav .btn.sm{display:none}
+ #menu{position:fixed;inset:0;background:var(--esp);flex-direction:column;justify-content:center;align-items:center;gap:1.6rem;font:300 2.4rem var(--serif);transform:translateY(-100%);transition:transform .7s var(--ease);z-index:-1}
+ #menu.open{transform:none}
+}
+@media(max-width:560px){
+ body{font-size:1rem}
+ .masonry{column-gap:.6rem}.item{margin-bottom:.6rem;min-height:150px}
+ .filters{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;gap:1.4rem;padding:.9rem 5vw;scrollbar-width:none}
+ .filters::-webkit-scrollbar{display:none}
+ .filters button{white-space:nowrap;flex:none}
+ .item figcaption{display:none}
+ .brand{font-size:1.4rem}.tools{gap:.3rem}
+}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.arc path{stroke-dashoffset:0}.kicker,.phero h1,.sub{opacity:1}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-i="skip">Kalo te përmbajtja</a>
+
+<header class="nav" id="nav">
+  <a class="brand" href="index.html" aria-label="Dea Dent">
+    <img src="images/logo.png" alt="" onerror="this.remove()">
+    <span>Dea <em>Dent</em></span>
+  </a>
+  <nav id="menu" aria-label="Main">
+    <a href="index.html#about" data-i="n_about">Klinika</a>
+    <a href="index.html#doctor" data-i="n_doc">Doktori</a>
+    <a href="index.html#treatments" data-i="n_treat">Trajtimet</a>
+    <a href="gallery.html" aria-current="page" data-i="n_gal">Galeria</a>
+    <a href="index.html#contact" data-i="n_contact">Kontakti</a>
+  </nav>
+  <div class="tools">
+    <div class="lang" role="group" aria-label="Language">
+      <button data-lang="sq" aria-pressed="true">SQ</button><button data-lang="mk" aria-pressed="false">MK</button><button data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn sm" href="index.html#book" data-i="n_book">Cakto vizitë</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="phero">
+    <p class="kicker" data-i="kick">Galeria e punëve</p>
+    <h1><span data-i="h1a">Puna</span> <span class="it" data-i="h1b">jonë</span></h1>
+    <svg class="arc" viewBox="0 0 600 70" aria-hidden="true"><path d="M10 12 Q300 100 590 12" pathLength="1"/></svg>
+    <p class="sub" data-i="sub">Një përzgjedhje rastesh të trajtuara në Dea Dent: ortodonci, implante, protetikë dhe estetikë.</p>
+  </section>
+
+  <div class="bar" id="bar"><div class="wrap"><div class="filters" id="filters" role="group" aria-label="Filter"></div></div></div>
+
+  <section class="gal"><div class="wrap">
+    <div class="masonry" id="masonry"></div>
+    <p class="note" data-i="note">Rezultatet individuale mund të ndryshojnë.</p>
+  </div></section>
+
+  <section class="cta">
+    <h2 data-i="cta_t">Gati për buzëqeshjen tuaj?</h2>
+    <p data-i="cta_p">Cakto një vizitë dhe do të planifikojmë së bashku trajtimin tuaj.</p>
+    <a class="btn" href="index.html#book" data-i="n_book">Cakto vizitë</a>
+  </section>
+</main>
+
+<footer class="foot">
+  <span class="brand"><span>Dea <em>Dent</em></span></span>
+  <p>Str. Ilindenska 144a/1, Gostivar · +389 (0)42 550 590 · dr.zumri@gmail.com</p>
+  <p>© <span id="yr"></span> Dea Dent. <span data-i="rights">Të gjitha të drejtat e rezervuara.</span> <a href="index.html" data-i="back">Kthehu te faqja kryesore</a></p>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Gallery" hidden>
+  <button class="x" data-act="close" aria-label="Close">×</button>
+  <button class="pv" data-act="prev" aria-label="Previous">‹</button>
+  <div class="stage" id="stage"></div><p id="cap"></p>
+  <button class="nx" data-act="next" aria-label="Next">›</button>
+</div>
+
+<script>
+'use strict';
+/* ===== PHOTOS =====
+   To add a photo: add its link into the matching list below.
+   To add a new category: add a new line here AND a name for it in T (sq, mk, en). */
+const U='https://i.imgur.com/';
+const CATS={
+  ortho:['bTgoWbn','6PHapFc','g3kl5eH','hEFzyEu','LEjSRxi','rGBQbpN','dMKmxZs','084I5NT','oC6cPpE','E4oucXt','8tjpWKR','87OuQ5S','rCFWFTy','tk45aNS','Oy8AvPO','MD7MRgB'],
+  implant:['hn5xeiJ','S9xZ2VT','1NpeXoA','CalFZJi','9BdXIkI','wrpZR0g'],
+  prosth:['v9CRHIB','wHfjt2D','7BjbuDH','wILdLg4','uNff8O1','VTMJsfE','L8rCB9a','ug7Ri7D'],
+  aesth:['INTjm4K'],
+  bleach:['dESYNxH','YnkB5n5','w69CmLa','HISEIHc','noZ0D34'],
+  endo:['er7oCqC','f0BRacj']
+};
+const ORDER=['implant','prosth','aesth','ortho','bleach','endo'];
+
+const T={
+sq:{skip:'Kalo te përmbajtja',n_about:'Klinika',n_doc:'Doktori',n_treat:'Trajtimet',n_gal:'Galeria',n_contact:'Kontakti',n_book:'Cakto vizitë',
+kick:'Galeria e punëve',h1a:'Puna',h1b:'jonë',sub:'Një përzgjedhje rastesh të trajtuara në Dea Dent: ortodonci, implante, protetikë dhe estetikë.',
+all:'Të gjitha',ortho:'Ortodonci',implant:'Implantologji',prosth:'Protetikë',aesth:'Estetikë',bleach:'Zbardhim',endo:'Endodonci',
+note:'Rezultatet individuale mund të ndryshojnë.',cta_t:'Gati për buzëqeshjen tuaj?',cta_p:'Cakto një vizitë dhe do të planifikojmë së bashku trajtimin tuaj.',
+rights:'Të gjitha të drejtat e rezervuara.',back:'Kthehu te faqja kryesore',title:'Dea Dent | Galeria e punëve'},
+mk:{skip:'Прескокни до содржината',n_about:'Клиника',n_doc:'Докторот',n_treat:'Третмани',n_gal:'Галерија',n_contact:'Контакт',n_book:'Закажи термин',
+kick:'Галерија на работи',h1a:'Нашата',h1b:'работа',sub:'Избор на случаи третирани во Dea Dent: ортодонција, импланти, протетика и естетика.',
+all:'Сите',ortho:'Ортодонција',implant:'Имплантологија',prosth:'Протетика',aesth:'Естетика',bleach:'Белење',endo:'Ендодонција',
+note:'Индивидуалните резултати може да се разликуваат.',cta_t:'Подготвени за вашиот осмев?',cta_p:'Закажете термин и заедно ќе го испланираме вашиот третман.',
+rights:'Сите права се задржани.',back:'Назад на почетна',title:'Dea Dent | Галерија на работи'},
+en:{skip:'Skip to content',n_about:'Clinic',n_doc:'Doctor',n_treat:'Treatments',n_gal:'Gallery',n_contact:'Contact',n_book:'Book a visit',
+kick:'Our work',h1a:'Our',h1b:'work',sub:'A selection of cases treated at Dea Dent: orthodontics, implants, prosthetics and aesthetics.',
+all:'All',ortho:'Orthodontics',implant:'Implantology',prosth:'Prosthetics',aesth:'Aesthetics',bleach:'Bleaching',endo:'Endodontics',
+note:'Individual results may vary.',cta_t:'Ready for your smile?',cta_p:'Book a visit and we will plan your treatment together.',
+rights:'All rights reserved.',back:'Back to home',title:'Dea Dent | Our work'}
+};
+
+const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>[...c.querySelectorAll(s)];
+let lang='sq';
+try{lang=localStorage.getItem('dd-lang')||'sq'}catch(e){}
+if(!T[lang])lang='sq';
+let cur='all';
+
+/* flat list of photos: {cat, n, src} */
+const PHOTOS=[];
+ORDER.forEach(c=>CATS[c].forEach((id,i)=>PHOTOS.push({cat:c,n:i+1,src:`${U}${id}.jpeg`})));
+
+function buildFilters(){
+  const box=$('#filters');box.innerHTML='';
+  const mk=(k,count)=>{
+    const b=document.createElement('button');b.type='button';b.dataset.f=k;
+    b.setAttribute('aria-pressed',k===cur);
+    b.innerHTML=`${T[lang][k]}<sup>${count}</sup>`;
+    b.addEventListener('click',()=>{cur=k;$$('button',box).forEach(x=>x.setAttribute('aria-pressed',x.dataset.f===k));render();
+      scrollTo({top:$('.gal').getBoundingClientRect().top+scrollY-130,behavior:'smooth'})});
+    box.appendChild(b);
+  };
+  mk('all',PHOTOS.length);ORDER.forEach(c=>mk(c,CATS[c].length));
+}
+
+let shown=[];
+function render(){
+  const m=$('#masonry');m.innerHTML='';
+  shown=PHOTOS.filter(p=>cur==='all'||p.cat===cur);
+  shown.forEach((p,i)=>{
+    const f=document.createElement('figure');
+    const b=document.createElement('button');
+    b.className='item';b.type='button';b.dataset.i=i;
+    b.style.animationDelay=Math.min(i,12)*60+'ms';
+    const label=`${T[lang][p.cat]} ${p.n}`;
+    b.setAttribute('aria-label',label);
+    b.innerHTML=`<img src="${p.src}" alt="${label}" loading="lazy" referrerpolicy="no-referrer"><figcaption>${T[lang][p.cat]}</figcaption>`;
+    const img=$('img',b);
+    img.addEventListener('load',()=>b.classList.add('ok'));
+    img.addEventListener('error',()=>{b.remove()});
+    if(img.complete&&img.naturalWidth)b.classList.add('ok');
+    m.appendChild(b);
+  });
+}
+
+function setLang(l){
+  lang=l;try{localStorage.setItem('dd-lang',l)}catch(e){}
+  document.documentElement.lang=l;document.title=T[l].title;
+  $$('[data-i]').forEach(el=>{const v=T[l][el.dataset.i];if(v)el.textContent=v});
+  $$('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===l));
+  buildFilters();render();
+}
+$$('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+
+/* nav */
+const nav=$('#nav'),burger=$('#burger'),menu=$('#menu');
+const onScroll=()=>nav.classList.toggle('solid',scrollY>60);
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+const toggleMenu=o=>{menu.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''};
+burger.addEventListener('click',()=>toggleMenu(!menu.classList.contains('open')));
+$$('#menu a').forEach(a=>a.addEventListener('click',()=>toggleMenu(false)));
+/* lightbox */
+const lb=$('#lb'),stage=$('#stage'),cap=$('#cap');let idx=0,opener=null;
+function show(i){
+  const items=$$('.item');if(!items.length)return;
+  idx=(i+items.length)%items.length;
+  const p=shown[+items[idx].dataset.i];
+  stage.innerHTML='';const c=document.createElement('img');c.src=p.src;c.alt=`${T[lang][p.cat]} ${p.n}`;c.referrerPolicy='no-referrer';stage.appendChild(c);
+  cap.innerHTML='';cap.append(T[lang][p.cat]);const s=document.createElement('small');s.textContent=`${idx+1} / ${items.length}`;cap.appendChild(s);
+}
+function openLb(el){
+  opener=el;const items=$$('.item');show(items.indexOf(el));
+  lb.hidden=false;document.body.style.overflow='hidden';$('.x',lb).focus();
+}
+function closeLb(){lb.hidden=true;document.body.style.overflow='';opener&&opener.isConnected&&opener.focus()}
+document.addEventListener('click',e=>{
+  const it=e.target.closest('.item');if(it&&!lb.contains(it))return openLb(it);
+  const a=e.target.dataset.act;if(a==='close')closeLb();if(a==='prev')show(idx-1);if(a==='next')show(idx+1);
+  if(e.target===lb||e.target===stage)closeLb();
+});
+document.addEventListener('keydown',e=>{
+  if(lb.hidden)return;
+  if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')show(idx-1);if(e.key==='ArrowRight')show(idx+1);
+});
+let tx=0;lb.addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
+lb.addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)show(idx+(d<0?1:-1))});
+
+$('#yr').textContent=new Date().getFullYear();
+setLang(lang);
+</script>
+</body>
+</html>
