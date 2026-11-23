@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kirurgji & Estetikë | Dea Dent, Gostivar</title>
+<meta name="description" content="Kirurgji dhe estetikë te Dea Dent në Gostivar: implante dentare, botox dhe mbushës dermal. Doc. Dr. Sci. Zumri Bitri.">
+<meta name="theme-color" content="#2A1F18">
+<link rel="canonical" href="https://www.dea-dent.mk/treatment4.html">
+<meta property="og:title" content="Kirurgji & Estetikë | Dea Dent">
+<meta property="og:image" content="images/treatment4-hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#CDAA7D;--gold-d:#9c7b52;--ivory:#FBF8F2;--cream:#F2EADD;--white:#fff;--esp:#2A1F18;--esp2:#3a2c22;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font:300 1.05rem/1.75 var(--sans);color:var(--esp);background:var(--ivory);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:1.5rem}
+.it{font-style:italic;color:var(--gold)}
+.wrap{width:min(1180px,90%);margin:auto}
+.sec{padding:clamp(5rem,12vw,10rem) 0;position:relative}
+.ivory{background:var(--ivory)}.cream{background:var(--cream)}.dark{background:var(--esp);color:var(--cream)}
+.lead{font:300 clamp(1.4rem,2.4vw,1.9rem)/1.4 var(--serif);margin-bottom:1.2rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,7vw,7rem);align-items:start}
+.note{font-size:.85rem;opacity:.65;margin-top:1.5rem;max-width:60ch}
+
+
+.nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.3rem 5vw;color:var(--cream);transition:padding .5s}
+.nav:before{content:"";position:absolute;inset:0;background:rgba(42,31,24,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);opacity:0;transition:opacity .5s;z-index:-1}
+.nav.solid:before{opacity:1}
+.nav.solid{padding:.8rem 5vw}
+.brand{display:flex;align-items:center;gap:.7rem;font:400 1.7rem var(--serif);letter-spacing:.04em}
+.brand img{height:34px}.brand em{color:var(--gold)}
+#menu{display:flex;gap:1.6rem;font-size:.88rem}
+#menu a{position:relative;padding:.3rem 0;white-space:nowrap}
+#menu a:after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+#menu a:hover:after{transform:scaleX(1);transform-origin:left}
+.tools{display:flex;align-items:center;gap:1rem}
+.lang button{background:none;border:0;padding:.3rem .45rem;font-size:.78rem;cursor:pointer;opacity:.6;letter-spacing:.08em}
+.lang button[aria-pressed=true]{opacity:1;color:var(--gold)}
+.burger{display:none;background:none;border:0;width:36px;height:36px;position:relative;cursor:pointer}
+.burger i{position:absolute;left:6px;right:6px;height:1px;background:currentColor;transition:.4s}
+.burger i:first-child{top:13px}.burger i:last-child{top:22px}
+.burger[aria-expanded=true] i:first-child{top:18px;transform:rotate(45deg)}
+.burger[aria-expanded=true] i:last-child{top:18px;transform:rotate(-45deg)}
+
+
+.btn{display:inline-block;position:relative;overflow:hidden;background:var(--gold);color:var(--esp);border:1px solid var(--gold);padding:1rem 2.2rem;font-size:.9rem;letter-spacing:.06em;cursor:pointer;transition:color .5s,transform .3s var(--ease);z-index:0}
+.btn:before{content:"";position:absolute;inset:0;background:var(--esp);transform:translateY(101%);transition:transform .5s var(--ease);z-index:-1}
+.btn:after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:shine 4.5s 2s infinite}
+@keyframes shine{0%,60%{left:-80%}100%{left:140%}}
+.btn:hover{color:var(--gold)}.btn:hover:before{transform:none}
+.btn.sm{padding:.6rem 1.3rem;font-size:.8rem}
+.btn.ghost{background:transparent;color:inherit;border-color:rgba(205,170,125,.6)}
+.btn.ghost:before{background:var(--gold)}.btn.ghost:hover{color:var(--esp)}.btn.ghost:after{display:none}
+.dark .btn:before,.hero .btn:before,.nav .btn:before{background:var(--ivory)}
+.cta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+
+
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;color:var(--cream);background:radial-gradient(ellipse at 70% 20%,#5a4430 0,transparent 55%),radial-gradient(ellipse at 15% 90%,#4a3626 0,transparent 50%),var(--esp);overflow:hidden}
+.phero{min-height:92svh}
+.hero-bg{position:absolute;inset:0;opacity:.4}
+.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,31,24,.5),rgba(42,31,24,.2) 40%,var(--esp));pointer-events:none}
+.orbs{position:absolute;inset:0;z-index:1;pointer-events:none}
+.orbs i{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(205,170,125,.5),transparent 70%);animation:float 9s ease-in-out infinite}
+.orbs i:nth-child(1){width:260px;height:260px;left:6%;top:18%}
+.orbs i:nth-child(2){width:180px;height:180px;right:9%;top:30%;animation-delay:-3s;animation-duration:11s}
+.orbs i:nth-child(3){width:120px;height:120px;left:42%;bottom:12%;animation-delay:-6s;animation-duration:8s}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(24px,-34px) scale(1.15)}}
+.hero-in{position:relative;z-index:2;padding:8rem 5vw 6rem;max-width:1000px}
+.kicker{font-size:.85rem;letter-spacing:.2em;color:var(--gold);margin-bottom:2rem;opacity:0;animation:up 1.2s .2s var(--ease) forwards}
+.hero h1{font-size:clamp(3rem,8.5vw,7.2rem);font-weight:300;opacity:0;animation:up 1.4s .4s var(--ease) forwards}
+.hero h1 .it{background:linear-gradient(100deg,var(--gold) 30%,#f4e3c6 50%,var(--gold) 70%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:gleam 5s 2s linear infinite}
+@keyframes gleam{to{background-position:-250% 0}}
+
+
+.crown{width:min(300px,60%);margin:1rem auto 0;display:block;overflow:visible}
+.crown .bone{fill:rgba(205,170,125,.12);stroke:var(--gold);stroke-width:1.2;stroke-dasharray:1;stroke-dashoffset:1;stroke-linejoin:round;opacity:.7;animation:draw 2s .6s var(--ease) forwards}
+.crown .tooth{fill:rgba(251,248,242,.1);stroke:var(--gold);stroke-width:1.5;stroke-dasharray:1;stroke-dashoffset:1;stroke-linejoin:round;animation:draw 2s .9s var(--ease) forwards}
+.crown .cap{fill:rgba(251,248,242,.95);stroke:var(--gold);stroke-width:1.5;stroke-linejoin:round;opacity:0;animation:drop 1.5s 2.3s var(--ease) forwards}
+.crown .ring{fill:none;stroke:var(--gold);stroke-width:1.2;transform-box:fill-box;transform-origin:center;opacity:0;animation:ripple 2.4s 3.5s var(--ease) infinite}
+.crown .sp{fill:var(--gold);transform-box:fill-box;transform-origin:center;opacity:0;animation:twinkle 2.8s infinite}
+.crown .sp:nth-of-type(1){animation-delay:3.6s}.crown .sp:nth-of-type(2){animation-delay:4.2s}.crown .sp:nth-of-type(3){animation-delay:4.8s}
+@keyframes drop{from{opacity:0;transform:translateY(-90px)}60%{opacity:1;transform:translateY(7px)}to{opacity:1;transform:none}}
+@keyframes ripple{0%{opacity:.8;transform:scale(.6)}100%{opacity:0;transform:scale(2.4)}}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(0) rotate(0)}50%{opacity:1;transform:scale(1) rotate(45deg)}}
+@keyframes draw{to{stroke-dashoffset:0}}
+.sub{max-width:52ch;margin:1.8rem auto 0;opacity:0;animation:up 1.2s 2.2s var(--ease) forwards;color:rgba(242,234,221,.8)}
+.chips{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:2.2rem;opacity:0;animation:up 1.2s 2.5s var(--ease) forwards}
+.chips a{border:1px solid rgba(205,170,125,.5);padding:.55rem 1.3rem;font-size:.85rem;transition:background .4s,color .4s,transform .4s var(--ease)}
+.chips a:hover,.chips a.on{background:var(--gold);color:var(--esp);transform:translateY(-3px)}
+.kicker a{border-bottom:1px solid transparent;transition:border-color .3s}.kicker a:hover{border-color:var(--gold)}
+@keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.scroll{position:absolute;bottom:2rem;left:50%;z-index:2;width:1px;height:60px;background:rgba(205,170,125,.3);overflow:hidden}
+.scroll span{display:block;width:1px;height:20px;background:var(--gold);animation:drip 2s infinite}
+@keyframes drip{from{transform:translateY(-20px)}to{transform:translateY(60px)}}
+#bar{position:fixed;top:0;left:0;height:2px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;z-index:60}
+
+
+.marq{background:var(--gold);color:var(--esp);overflow:hidden;white-space:nowrap;padding:.9rem 0;font:italic 400 1.5rem var(--serif)}
+.marq div{display:inline-flex;gap:3rem;animation:slide 32s linear infinite;padding-left:3rem}
+.marq span:after{content:"✦";margin-left:3rem;font-style:normal;font-size:.9rem}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+.intro{text-align:center;max-width:780px}
+
+
+.ph{position:relative;overflow:hidden;background:linear-gradient(145deg,#e8dcc8,#d6c3a3 55%,#c9b08a);display:grid;place-items:center;margin:0;aspect-ratio:4/5}
+.ph:before{content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,.55);z-index:1;pointer-events:none}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.ph b{font:italic 300 1.4rem var(--serif);color:rgba(42,31,24,.45);z-index:0;text-align:center;padding:0 2rem}
+.svc .split{align-items:center}
+.flip .ph{order:2}
+.svc h2{font-size:clamp(2.2rem,4.5vw,3.6rem)}
+.svc h3{font-size:1.7rem;color:var(--gold-d);margin:1.8rem 0 .8rem}
+.num{position:absolute;right:4vw;top:2rem;font:italic 300 clamp(8rem,20vw,16rem)/1 var(--serif);color:var(--gold);opacity:.14;pointer-events:none;animation:float 12s ease-in-out infinite}
+.steps{list-style:none;position:relative;padding-left:1.9rem}
+.steps:before{content:"";position:absolute;left:5px;top:1rem;bottom:1rem;width:1px;background:var(--gold);transform:scaleY(0);transform-origin:top;transition:transform 2s var(--ease)}
+.steps.in:before{transform:none}
+.steps li{position:relative;padding:.5rem 0;opacity:0;transform:translateX(-14px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.steps.in li{opacity:1;transform:none}
+.steps li:before{content:"";position:absolute;left:-1.9rem;top:1.15rem;width:11px;height:11px;border-radius:50%;background:var(--ivory);border:1px solid var(--gold)}
+.steps.in li:before{animation:ping 2.6s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(205,170,125,.6)}70%,100%{box-shadow:0 0 0 12px rgba(205,170,125,0)}}
+.cream .steps li:before{background:var(--cream)}
+.know{margin:1.6rem 0 2rem;padding:1rem 1.3rem;border-left:2px solid var(--gold);background:rgba(205,170,125,.12);font-size:.95rem}
+.know strong{font-weight:500;color:var(--gold-d)}
+
+
+.journey{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:4rem;position:relative}
+.journey:before{content:"";position:absolute;left:0;right:0;top:22px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 2.4s var(--ease)}
+.journey.in:before{transform:none}
+.jn{position:relative;padding-top:4rem;opacity:0;transform:translateY(30px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.journey.in .jn{opacity:1;transform:none}
+.jn:before{content:attr(data-n);position:absolute;top:0;left:0;width:46px;height:46px;border-radius:50%;background:var(--esp);border:1px solid var(--gold);color:var(--gold);display:grid;place-items:center;font:400 1.3rem var(--serif);transition:background .4s,color .4s,transform .5s var(--ease)}
+.jn:hover:before{background:var(--gold);color:var(--esp);transform:scale(1.15) rotate(-8deg)}
+.jn h3{font-size:1.7rem;color:var(--gold);margin-bottom:.5rem}
+.jn p{opacity:.8;font-size:.97rem}
+
+
+.tw{overflow-x:auto;margin-top:3rem;border:1px solid rgba(42,31,24,.15)}
+table{width:100%;border-collapse:collapse;min-width:640px;background:var(--white)}
+th,td{text-align:left;padding:1.2rem 1.4rem;border-bottom:1px solid rgba(42,31,24,.1);vertical-align:top;font-size:.97rem}
+thead th{font:400 1.5rem var(--serif);color:var(--gold-d);background:var(--cream)}
+tbody th{font-weight:500;font-size:.8rem;letter-spacing:.08em;color:var(--gold-d);width:16%}
+tbody tr{transition:background .4s}
+tbody tr:hover{background:rgba(205,170,125,.14)}
+tbody td{transition:padding .4s var(--ease)}
+tbody tr:hover td{padding-left:1.8rem}
+
+.after ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(205,170,125,.25);border:1px solid rgba(205,170,125,.25);margin-top:2rem}
+.after li{background:var(--esp);padding:2.2rem 2rem;font:300 1.35rem/1.35 var(--serif);transition:background .5s,color .5s,transform .5s var(--ease)}
+.after li:hover{background:var(--esp2);color:var(--gold);transform:translateY(-6px)}
+
+
+.faq{max-width:860px}
+details{border-bottom:1px solid rgba(42,31,24,.18);padding:1.3rem 0}
+summary{cursor:pointer;font:400 1.6rem/1.2 var(--serif);list-style:none;display:flex;justify-content:space-between;gap:1rem;transition:color .3s}
+summary::-webkit-details-marker{display:none}
+summary:hover{color:var(--gold-d)}
+summary:after{content:"+";color:var(--gold);transition:transform .4s var(--ease)}
+details[open] summary:after{transform:rotate(45deg)}
+details p{padding-top:.8rem;opacity:.8;max-width:65ch;animation:fade .6s}
+@keyframes fade{from{opacity:0;transform:translateY(-6px)}}
+
+.cta-band{text-align:center;overflow:hidden}.cta-band p{opacity:.8;max-width:50ch;margin:0 auto}.cta-band .cta{justify-content:center}
+.cta-band:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;left:50%;top:50%;margin:-260px 0 0 -260px;background:radial-gradient(circle,rgba(205,170,125,.25),transparent 65%);animation:breathe 6s ease-in-out infinite}
+@keyframes breathe{50%{transform:scale(1.35);opacity:.6}}
+.cta-band .wrap{position:relative}
+.addr{margin-top:1rem!important;font-size:.9rem}
+.foot{background:#1d1510;color:rgba(242,234,221,.7);text-align:center;padding:4rem 5vw;display:grid;gap:1rem;font-size:.9rem}
+.foot .brand{justify-content:center;color:var(--cream)}
+.foot a{color:var(--gold);margin-left:1rem}
+
+
+.js .rv{opacity:0;transform:translateY(40px);transition:opacity 1.2s var(--ease),transform 1.2s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.l{transform:translateX(-50px)}.js .rv.r{transform:translateX(50px)}
+.js .rv.l.in,.js .rv.r.in{transform:none}
+
+@media(max-width:1100px){
+ .burger{display:block}.nav .btn.sm{display:none}
+ #menu{position:fixed;inset:0;background:var(--esp);flex-direction:column;justify-content:center;align-items:center;gap:1.6rem;font:300 2.4rem var(--serif);transform:translateY(-100%);transition:transform .7s var(--ease),visibility 0s .7s;z-index:-1;visibility:hidden}
+ #menu.open{transform:none;visibility:visible;transition-delay:0s}
+}
+@media(max-width:980px){
+ .split,.journey{grid-template-columns:1fr}.journey:before{display:none}
+ .flip .ph{order:0}
+}
+@media(max-width:700px){.after ul{grid-template-columns:1fr}.brand{font-size:1.4rem}.tools{gap:.3rem}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+ .kicker,.hero h1,.sub,.chips{opacity:1}.crown .tooth,.crown .bone{stroke-dashoffset:0}.crown .cap{opacity:1}.steps li,.jn{opacity:1;transform:none}.steps:before,.journey:before{transform:none}}
+</style>
+</head>
+<body>
+<div id="bar" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="index.html" aria-label="Dea Dent">
+    <img src="images/logo.png" alt="" onerror="this.remove()">
+    <span>Dea <em>Dent</em></span>
+  </a>
+
+  <nav id="menu" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="#implants" data-i="i41"></a>
+    <a href="#botox" data-i="i42"></a>
+    <a href="#faq" data-i="lbl_faq"></a>
+    <a href="#contact" data-i="n_contact"></a>
+  </nav>
+
+  <div class="tools">
+    <div class="lang" role="group" aria-label="Language">
+      <button data-lang="sq" aria-pressed="true">SQ</button>
+      <button data-lang="mk" aria-pressed="false">MK</button>
+      <button data-lang="en" aria-pressed="false">EN</button>
+    </div>
+
+    <a class="btn sm" href="tel:+38942550590" data-i="n_book"></a>
+
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <i></i>
+      <i></i>
+    </button>
+  </div>
+</header>
+
+
+<main id="main">
+<section class="hero phero" id="top">
+  <div class="hero-bg"><img referrerpolicy="no-referrer" src="images/treatment4-hero.jpg" alt="" fetchpriority="high" onerror="this.remove()"></div>
+  <div class="orbs" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="hero-in">
+    <p class="kicker"><a href="index.html" data-i="bc"></a> &nbsp;/&nbsp; <span data-i="p_t"></span></p>
+    <h1><span class="it" data-i="p_t"></span></h1>
+    <svg class="crown" viewBox="0 0 600 190" aria-hidden="true">
+      <circle class="ring" cx="300" cy="50" r="60"/>
+      <path class="bone" pathLength="1" d="M200 100 Q300 88 400 100 V176 Q300 188 200 176Z"/>
+      <path class="tooth" pathLength="1" d="M282 86 H318 L314 150 Q300 164 286 150Z"/>
+      <path class="tooth" pathLength="1" d="M283 104 H317 M284 118 H316 M286 132 H314 M289 146 H311"/>
+      <path class="cap" d="M242 66 Q242 18 275 18 Q300 32 325 18 Q358 18 358 66 Q358 80 346 80 H254 Q242 80 242 66Z"/>
+      <path class="sp" d="M392 30 l5 14 14 5 -14 5 -5 14 -5 -14 -14 -5 14 -5z"/>
+      <path class="sp" d="M200 20 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z"/>
+      <path class="sp" d="M410 96 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z"/>
+    </svg>
+    <p class="sub" data-i="p_sub"></p>
+    <nav class="chips" aria-label="Sections"><a href="#implants" data-i="i41"></a><a href="#botox" data-i="i42"></a></nav>
+  </div>
+  <div class="scroll" aria-hidden="true"><span></span></div>
+</section>
+
+<div class="marq" aria-hidden="true"><div><span data-i="i41"></span><span data-i="i42"></span><span data-i="i41"></span><span data-i="i42"></span><span data-i="i41"></span><span data-i="i42"></span><span data-i="i41"></span><span data-i="i42"></span><span data-i="i41"></span><span data-i="i42"></span><span data-i="i41"></span><span data-i="i42"></span></div></div>
+
+<section class="sec ivory"><div class="wrap intro rv"><h2 data-i="in_t"></h2><p class="lead" data-i="in_p"></p></div></section>
+
+<section class="sec cream svc" id="implants"><span class="num" aria-hidden="true">01</span><div class="wrap split">
+  <figure class="ph nl"><img referrerpolicy="no-referrer" src="https://i.imgur.com/hn5xeiJ.jpeg" alt="" loading="lazy" onerror="this.remove()"><b data-i="i41"></b></figure>
+  <div><h2 class="rv r" data-i="i41"></h2><p class="lead rv" data-i="im_p"></p>
+    <h3 class="rv" data-i="lbl_steps"></h3>
+    <ol class="steps rv"><li data-i="im_s1"></li><li data-i="im_s2"></li><li data-i="im_s3"></li><li data-i="im_s4"></li></ol>
+    <p class="know rv"><strong data-i="lbl_know"></strong> <span data-i="im_k"></span></p>
+    <a class="btn rv" href="tel:+38942550590" data-i="n_book"></a></div>
+</div></section>
+
+<section class="sec ivory svc flip" id="botox"><span class="num" aria-hidden="true">02</span><div class="wrap split">
+  <figure class="ph nl"><img referrerpolicy="no-referrer" src="https://i.imgur.com/S9xZ2VT.jpeg" alt="" loading="lazy" onerror="this.remove()"><b data-i="i42"></b></figure>
+  <div><h2 class="rv l" data-i="i42"></h2><p class="lead rv" data-i="bt_p"></p>
+    <h3 class="rv" data-i="lbl_steps"></h3>
+    <ol class="steps rv"><li data-i="bt_s1"></li><li data-i="bt_s2"></li><li data-i="bt_s3"></li><li data-i="bt_s4"></li></ol>
+    <p class="know rv"><strong data-i="lbl_know"></strong> <span data-i="bt_k"></span></p>
+    <a class="btn rv" href="tel:+38942550590" data-i="n_book"></a></div>
+</div></section>
+
+<section class="sec cream" id="compare"><div class="wrap"><h2 class="rv" data-i="cmp_t"></h2>
+  <div class="tw rv"><table>
+    <thead><tr><th></th><th data-i="i41"></th><th data-i="i42"></th></tr></thead>
+    <tbody>
+      <tr><th data-i="cm_r1"></th><td data-i="cm_11"></td><td data-i="cm_12"></td></tr>
+      <tr><th data-i="cm_r2"></th><td data-i="cm_21"></td><td data-i="cm_22"></td></tr>
+      <tr><th data-i="cm_r3"></th><td data-i="cm_31"></td><td data-i="cm_32"></td></tr>
+    </tbody></table></div></div></section>
+
+<section class="sec dark"><div class="wrap"><h2 class="rv" data-i="j_t"></h2>
+  <div class="journey" id="journey">
+    <div class="jn" data-n="1" style="transition-delay:.2s"><h3 data-i="j1"></h3><p data-i="j1p"></p></div>
+    <div class="jn" data-n="2" style="transition-delay:.6s"><h3 data-i="j2"></h3><p data-i="j2p"></p></div>
+    <div class="jn" data-n="3" style="transition-delay:1s"><h3 data-i="j3"></h3><p data-i="j3p"></p></div>
+    <div class="jn" data-n="4" style="transition-delay:1.4s"><h3 data-i="j4"></h3><p data-i="j4p"></p></div>
+  </div></div></section>
+
+<section class="sec dark after" style="padding-top:0"><div class="wrap"><h2 class="rv" data-i="af_t"></h2>
+  <ul class="rv"><li data-i="af_1"></li><li data-i="af_2"></li><li data-i="af_3"></li></ul></div></section>
+
+<section class="sec ivory" id="faq-s"><div class="wrap faq" id="faq"><h2 class="rv" data-i="lbl_faq"></h2>
+  <details class="rv"><summary data-i="q1"></summary><p data-i="a1"></p></details>
+  <details class="rv"><summary data-i="q2"></summary><p data-i="a2"></p></details>
+  <details class="rv"><summary data-i="q3"></summary><p data-i="a3"></p></details>
+  <details class="rv"><summary data-i="q4"></summary><p data-i="a4"></p></details>
+  <p class="note rv" data-i="disc"></p></div></section>
+
+<section class="sec dark cta-band" id="contact"><div class="wrap rv"><h2 data-i="cta_t"></h2><p data-i="cta_p"></p><p class="addr">Str. Ilindenska 144a/1, Gostivar · +389 (0)42 550 590 · dr.zumri@gmail.com</p>
+  <div class="cta"><a class="btn" href="tel:+38942550590" data-i="n_book"></a><a class="btn ghost" href="mailto:dr.zumri@gmail.com?subject=Dea%20Dent">Email</a><a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Ilindenska+144a+Gostivar+North+Macedonia" data-i="k_dir"></a></div></div></section>
+</main>
+
+<footer class="foot">
+  <span class="brand"><span>Dea <em>Dent</em></span></span>
+  <p>Str. Ilindenska 144a/1, Gostivar · <a href="tel:+38942550590" style="margin:0">+389 (0)42 550 590</a> · <a href="mailto:dr.zumri@gmail.com" style="margin:0">dr.zumri@gmail.com</a></p>
+  <p>© <span id="yr"></span> Dea Dent. <span data-i="rights"></span> <a href="#main" data-i="top"></a></p>
+</footer>
+<script>
+'use strict';
+
+const T={
+sq:{n_contact:"Kontakti",n_book:"Cakto vizitë",bc:"Trajtimet",
+p_t:"Kirurgji & Estetikë",p_sub:"Implante që zëvendësojnë dhëmbët e humbur dhe trajtime estetike që e freskojnë pamjen në mënyrë natyrale.",
+i41:"Implante dentare",i42:"Botox & mbushës dermal",
+in_t:"Funksion i rikthyer, pamje e freskët",in_p:"Kirurgjia orale zëvendëson dhëmbët që mungojnë, ndërsa trajtimet estetike të fytyrës ndihmojnë të zbuten rrudhat dhe të rikthehet vëllimi. Çdo plan caktohet vetëm pas ekzaminimit.",
+lbl_steps:"Si ecën trajtimi",lbl_know:"Mirë është ta dini:",lbl_faq:"Pyetje të shpeshta",
+im_p:"Implanti dentar është një vidë e vogël prej titani që vendoset në kockën e nofullës dhe shërben si rrënjë e re. Mbi të vendoset kurora, ura ose proteza, duke rikthyer përtypjen dhe buzëqeshjen.",
+im_s1:"Ekzaminim, radiografi ose CT dhe vlerësim i kockës dhe i mishit të dhëmbëve",im_s2:"Vendosja e implantit nën anestezi lokale",im_s3:"Periudha e shërimit, gjatë së cilës implanti bashkohet me kockën (osteointegrim)",im_s4:"Vendosja e kurorës përfundimtare mbi implant dhe kontrolli i kafshimit",
+im_k:"Shërimi zakonisht zgjat disa muaj, por varet nga rasti. Nëse kocka është e pamjaftueshme, mjeku mund të këshillojë shtim kocke ose ngritje të sinusit para implantit. Pirja e duhanit dhe higjiena e dobët rrisin rrezikun e komplikimeve.",
+bt_p:"Botoxi (toksinë botulinike) e relakson përkohësisht muskulin që shkakton rrudhat e mimikës, ndërsa mbushësit dermalë, shpesh me acid hialuronik, rikthejnë vëllimin dhe hidratimin e lëkurës.",
+bt_s1:"Konsultë, vlerësim i fytyrës dhe bisedë për rezultatin që dëshironi",bt_s2:"Pastrimi i lëkurës dhe, kur nevojitet, kremi anestetik",bt_s3:"Injektim i hollë në pikat e caktuara, zakonisht i shpejtë",bt_s4:"Udhëzime pas trajtimit dhe kontroll nëse nevojitet përmirësim",
+bt_k:"Efekti i botoxit shfaqet pas disa ditësh dhe zakonisht zgjat disa muaj; mbushësit zgjasin më shumë, sipas llojit dhe zonës. Mund të ketë skuqje, ënjtje ose mavijosje të lehtë. Trajtimi nuk këshillohet gjatë shtatzënisë dhe ushqyerjes me gji, dhe duhet kryer vetëm nga mjek i kualifikuar.",
+cmp_t:"Cili trajtim është për ju?",cm_r1:"QËLLIMI",cm_r2:"KOHËZGJATJA",cm_r3:"PROCEDURA",
+cm_11:"Zëvendësim i një ose më shumë dhëmbëve që mungojnë",cm_12:"Zbutje e rrudhave të mimikës dhe rikthim i vëllimit të fytyrës",
+cm_21:"Afatgjatë, me kujdes të mirë dhe kontrolle të rregullta",cm_22:"E përkohshme: disa muaj te botoxi, më shumë te mbushësit, sipas llojit",
+cm_31:"Procedurë kirurgjikale me anestezi lokale dhe periudhë shërimi",cm_32:"Injektime të vogla, me pak ose aspak kohë shërimi",
+j_t:"Rruga drejt rezultatit",j1:"Konsultë",j1p:"Ekzaminim, radiografi dhe bisedë për pritshmëritë tuaja.",j2:"Planifikimi",j2p:"Mjeku sqaron opsionet, hapat dhe afatet e trajtimit.",j3:"Trajtimi",j3p:"Procedura kryhet me kujdes dhe, kur nevojitet, me anestezi.",j4:"Kontrolli",j4p:"Udhëzime pas trajtimit dhe kontroll për të ndjekur rezultatin.",
+af_t:"Kujdesi pas trajtimit",af_1:"Pas implantit ndiqni udhëzimet e mjekut për higjienën dhe ushqimin dhe shmangni duhanin gjatë shërimit",af_2:"Pas botoxit ose mbushësve shmangni fërkimin e zonës dhe stërvitjen e rëndë ditën e parë, ose sipas udhëzimit",af_3:"Ejani në kontrollet e planifikuara dhe lajmëroni mjekun nëse ndjeni dhimbje, ënjtje të madhe ose ndryshime të pazakonta",
+q1:"Sa zgjat shërimi pas implantit?",a1:"Zakonisht disa muaj, derisa implanti të bashkohet me kockën. Koha varet nga rasti dhe nga gjendja e kockës; mjeku do t'ju japë një plan të qartë.",
+q2:"A dhemb vendosja e implantit?",a2:"Procedura kryhet me anestezi lokale, prandaj nuk duhet të ndjeni dhimbje gjatë saj. Pas saj mund të ketë pak ënjtje dhe shqetësim, që zakonisht kontrollohet sipas këshillës së mjekut.",
+q3:"Sa zgjat efekti i botoxit?",a3:"Zakonisht disa muaj, pastaj trajtimi mund të përsëritet. Efekti shfaqet gradualisht brenda disa ditëve.",
+q4:"A janë këto trajtime të sigurta?",a4:"Kur kryhen nga mjek i kualifikuar me produkte të aprovuara, konsiderohen të sigurta, por kanë efekte anësore dhe kundërindikacione. Mjeku do t'i vlerësojë ato gjatë konsultës.",
+disc:"Informacion i përgjithshëm. Plani përfundimtar caktohet vetëm pas ekzaminimit.",
+cta_t:"Gati të planifikoni trajtimin?",cta_p:"Cakto një konsultë dhe mjeku do t'ju shpjegojë opsionet e përshtatshme.",k_dir:"Merr drejtimet",rights:"Të gjitha të drejtat e rezervuara.",top:"Kthehu lart"},
+mk:{n_contact:"Контакт",n_book:"Закажи термин",bc:"Третмани",
+p_t:"Хирургија и естетика",p_sub:"Импланти што ги заменуваат изгубените заби и естетски третмани што го освежуваат изгледот на природен начин.",
+i41:"Дентални импланти",i42:"Ботокс и дермални филери",
+in_t:"Вратена функција, свеж изглед",in_p:"Оралната хирургија ги заменува забите што недостасуваат, а естетските третмани на лицето помагаат да се ублажат брчките и да се врати волуменот. Секој план се одредува дури по преглед.",
+lbl_steps:"Како тече третманот",lbl_know:"Добро е да знаете:",lbl_faq:"Често поставувани прашања",
+im_p:"Забниот имплант е мала титаниумска завртка што се става во вилицата и служи како нов корен. Врз него се става круна, мост или протеза, со што се враќаат џвакањето и осмевот.",
+im_s1:"Преглед, рендгенска снимка или CT и проценка на коската и непцата",im_s2:"Поставување на имплантот под локална анестезија",im_s3:"Период на заздравување, во кој имплантот се сраснува со коската (остеоинтеграција)",im_s4:"Поставување на конечната круна врз имплантот и контрола на загризот",
+im_k:"Заздравувањето обично трае неколку месеци, но зависи од случајот. Ако коската е недоволна, лекарот може да препорача надградба на коска или подигање на синус пред имплантот. Пушењето и слабата хигиена го зголемуваат ризикот од компликации.",
+bt_p:"Ботоксот (ботулински токсин) привремено го опушта мускулот што предизвикува мимички брчки, а дермалните филери, често од хијалуронска киселина, го враќаат волуменот и хидратацијата на кожата.",
+bt_s1:"Консултација, проценка на лицето и разговор за посакуваниот резултат",bt_s2:"Чистење на кожата и, по потреба, анестетичка крема",bt_s3:"Фино инјектирање на одредени точки, обично брзо",bt_s4:"Упатства по третманот и контрола ако е потребно дотерување",
+bt_k:"Ефектот на ботоксот се појавува по неколку дена и обично трае неколку месеци; филерите траат подолго, зависно од видот и зоната. Можни се црвенило, оток или лесна модрица. Третманот не се препорачува за време на бременост и дојење и треба да го изведува само квалификуван лекар.",
+cmp_t:"Кој третман е за вас?",cm_r1:"ЦЕЛ",cm_r2:"ТРАЕЊЕ",cm_r3:"ПРОЦЕДУРА",
+cm_11:"Замена на еден или повеќе заби што недостасуваат",cm_12:"Ублажување на мимички брчки и враќање на волуменот на лицето",
+cm_21:"Долгорочно, со добра грижа и редовни контроли",cm_22:"Привремено: неколку месеци кај ботоксот, подолго кај филерите, зависно од видот",
+cm_31:"Хируршка процедура со локална анестезија и период на заздравување",cm_32:"Мали инјекции, со малку или без време за закрепнување",
+j_t:"Патот до резултатот",j1:"Консултација",j1p:"Преглед, рендгенски снимки и разговор за вашите очекувања.",j2:"Планирање",j2p:"Лекарот ги објаснува опциите, чекорите и роковите на третманот.",j3:"Третман",j3p:"Процедурата се изведува внимателно и, по потреба, со анестезија.",j4:"Контрола",j4p:"Упатства по третманот и контрола за следење на резултатот.",
+af_t:"Грижа по третманот",af_1:"По имплантот следете ги упатствата на лекарот за хигијена и исхрана и избегнувајте пушење за време на заздравувањето",af_2:"По ботокс или филери избегнувајте триење на зоната и напорно вежбање првиот ден, или според упатство",af_3:"Доаѓајте на закажаните контроли и јавете му на лекарот ако почувствувате болка, голем оток или невообичаени промени",
+q1:"Колку трае заздравувањето по имплант?",a1:"Обично неколку месеци, додека имплантот не се сроси со коската. Времето зависи од случајот и состојбата на коската; лекарот ќе ви даде јасен план.",
+q2:"Дали боли поставувањето на имплант?",a2:"Процедурата се изведува со локална анестезија, па за време на неа не треба да чувствувате болка. По неа можни се мал оток и непријатност, што обично се контролира според совет на лекарот.",
+q3:"Колку трае ефектот на ботоксот?",a3:"Обично неколку месеци, потоа третманот може да се повтори. Ефектот се појавува постепено во рок од неколку дена.",
+q4:"Дали овие третмани се безбедни?",a4:"Кога ги изведува квалификуван лекар со одобрени производи, се сметаат за безбедни, но имаат несакани ефекти и контраиндикации. Лекарот ќе ги процени за време на консултацијата.",
+disc:"Општи информации. Конечниот план се одредува дури по преглед.",
+cta_t:"Подготвени да го планирате третманот?",cta_p:"Закажете консултација и лекарот ќе ви ги објасни соодветните опции.",k_dir:"Добиј насоки",rights:"Сите права се задржани.",top:"Назад горе"},
+en:{n_contact:"Contact",n_book:"Book a visit",bc:"Treatments",
+p_t:"Surgery & Aesthetics",p_sub:"Implants that replace missing teeth and aesthetic treatments that refresh your look in a natural way.",
+i41:"Dental implants",i42:"Botox & dermal fillers",
+in_t:"Restored function, a fresher look",in_p:"Oral surgery replaces missing teeth, while aesthetic facial treatments help soften wrinkles and restore volume. Every plan is set only after an examination.",
+lbl_steps:"How treatment works",lbl_know:"Good to know:",lbl_faq:"Frequently asked questions",
+im_p:"A dental implant is a small titanium screw placed in the jawbone that acts as a new root. A crown, bridge or denture is then attached to it, restoring chewing and your smile.",
+im_s1:"Examination, X-ray or CT scan and assessment of the bone and gums",im_s2:"Placing the implant under local anaesthesia",im_s3:"A healing period, during which the implant fuses with the bone (osseointegration)",im_s4:"Fitting the final crown on the implant and checking the bite",
+im_k:"Healing usually takes a few months, but it depends on the case. If there is not enough bone, the doctor may advise a bone graft or sinus lift before the implant. Smoking and poor hygiene raise the risk of complications.",
+bt_p:"Botox (botulinum toxin) temporarily relaxes the muscle that causes expression lines, while dermal fillers, often made of hyaluronic acid, restore volume and hydration to the skin.",
+bt_s1:"Consultation, facial assessment and a talk about the result you want",bt_s2:"Cleansing the skin and, when needed, numbing cream",bt_s3:"Fine injections at specific points, usually quick",bt_s4:"Aftercare instructions and a check-up if a touch-up is needed",
+bt_k:"The effect of Botox appears after a few days and usually lasts a few months; fillers last longer, depending on the type and area. Some redness, swelling or mild bruising is possible. The treatment is not advised during pregnancy and breastfeeding, and should only be carried out by a qualified doctor.",
+cmp_t:"Which treatment is right for you?",cm_r1:"PURPOSE",cm_r2:"DURATION",cm_r3:"PROCEDURE",
+cm_11:"Replacing one or more missing teeth",cm_12:"Softening expression lines and restoring facial volume",
+cm_21:"Long-term, with good care and regular check-ups",cm_22:"Temporary: a few months for Botox, longer for fillers, depending on the type",
+cm_31:"Surgical procedure under local anaesthesia with a healing period",cm_32:"Small injections, with little or no recovery time",
+j_t:"The road to your result",j1:"Consultation",j1p:"Examination, X-rays and a talk about your expectations.",j2:"Planning",j2p:"The doctor explains the options, steps and timeline of the treatment.",j3:"Treatment",j3p:"The procedure is carried out with care and, when needed, with anaesthesia.",j4:"Follow-up",j4p:"Aftercare instructions and a check-up to follow the result.",
+af_t:"Aftercare",af_1:"After an implant, follow the doctor's advice on hygiene and food, and avoid smoking while it heals",af_2:"After Botox or fillers, avoid rubbing the area and heavy exercise on the first day, or as advised",af_3:"Come to your planned check-ups and tell the doctor if you feel pain, heavy swelling or anything unusual",
+q1:"How long does healing take after an implant?",a1:"Usually a few months, until the implant fuses with the bone. The time depends on the case and the condition of the bone; the doctor will give you a clear plan.",
+q2:"Is placing an implant painful?",a2:"It is done under local anaesthesia, so you should feel no pain during the procedure. Some mild swelling and discomfort afterwards is possible and is usually managed as the doctor advises.",
+q3:"How long does Botox last?",a3:"Usually a few months, after which the treatment can be repeated. The effect appears gradually within a few days.",
+q4:"Are these treatments safe?",a4:"When carried out by a qualified doctor with approved products, they are considered safe, but they have side effects and contraindications. The doctor will assess these during the consultation.",
+disc:"General information. The final plan is set only after an examination.",
+cta_t:"Ready to plan your treatment?",cta_p:"Book a consultation and the doctor will explain the options that suit you.",k_dir:"Get directions",rights:"All rights reserved.",top:"Back to top"}
+};
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+document.documentElement.classList.add('js');
+let lang='sq';try{lang=localStorage.getItem('dd-lang')||'sq'}catch(e){}
+if(!T[lang])lang='sq';
+function setLang(l){
+  try{localStorage.setItem('dd-lang',l)}catch(e){}
+  document.documentElement.lang=l;
+  $$('[data-i]').forEach(el=>{const v=T[l][el.dataset.i];if(v)el.textContent=v});
+  $$('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===l));
+  document.title=T[l].p_t+' | Dea Dent';
+}
+setLang(lang);
+$$('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+
+const nav=$('#nav'),bar=$('#bar'),burger=$('#burger'),menu=$('#menu');
+const onScroll=()=>{
+  nav.classList.toggle('solid',scrollY>60);
+  const max=document.documentElement.scrollHeight-innerHeight;bar.style.transform=`scaleX(${max>0?scrollY/max:0})`;
+  $$('.num').forEach(n=>{const r=n.parentElement.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight)n.style.translate=`0 ${(r.top-innerHeight/2)*.08}px`});
+};
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+const toggle=o=>{menu.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''};
+burger.addEventListener('click',()=>toggle(!menu.classList.contains('open')));
+$$('#menu a').forEach(a=>a.addEventListener('click',()=>toggle(false)));
+
+const io=window.IntersectionObserver?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15}):{observe:el=>el.classList.add('in'),unobserve(){}};
+$$('.rv,.journey').forEach((el,i)=>{if(el.classList.contains('rv'))el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+
+setTimeout(()=>$$('.rv:not(.in),.journey:not(.in),.steps:not(.in)').forEach(el=>{const r=el.getBoundingClientRect();if(r.top<innerHeight*1.1)el.classList.add('in')}),1500);
+$$('.steps li').forEach((li,i)=>{li.style.transitionDelay=(i%4)*140+'ms'});
+$$('.steps').forEach(s=>io.observe(s));
+
+const chips=$$('.chips a'),so=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting)chips.forEach(c=>c.classList.toggle('on',c.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-40% 0px -50% 0px'});
+$$('.svc').forEach(s=>so.observe(s));
+
+
+if(matchMedia('(hover:hover) and (prefers-reduced-motion:no-preference)').matches){
+  $$('.btn').forEach(b=>{
+    b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();
+      b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.15}px,${(e.clientY-r.top-r.height/2)*.25}px)`});
+    b.addEventListener('mouseleave',()=>{b.style.transform=''});
+  });
+}
+$('#yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
