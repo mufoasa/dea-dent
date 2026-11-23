@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ortodonci | Dea Dent, Gostivar</title>
+<meta name="description" content="Ortodonci te Dea Dent në Gostivar: aparate fikse, aparate mobile dhe Invisalign. Doc. Dr. Sci. Zumri Bitri.">
+<meta name="theme-color" content="#2A1F18">
+<link rel="canonical" href="https://www.example.com/treatment2.html"><!-- TODO: real domain -->
+<meta property="og:title" content="Ortodonci | Dea Dent">
+<meta property="og:image" content="images/treatment2-hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#CDAA7D;--gold-d:#9c7b52;--ivory:#FBF8F2;--cream:#F2EADD;--white:#fff;--esp:#2A1F18;--esp2:#3a2c22;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font:300 1.05rem/1.75 var(--sans);color:var(--esp);background:var(--ivory);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:1.5rem}
+.it{font-style:italic;color:var(--gold)}
+.wrap{width:min(1180px,90%);margin:auto}
+.sec{padding:clamp(5rem,12vw,10rem) 0;position:relative}
+.ivory{background:var(--ivory)}.cream{background:var(--cream)}.dark{background:var(--esp);color:var(--cream)}
+.lead{font:300 clamp(1.4rem,2.4vw,1.9rem)/1.4 var(--serif);margin-bottom:1.2rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,7vw,7rem);align-items:start}
+.note{font-size:.85rem;opacity:.65;margin-top:1.5rem;max-width:60ch}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.3rem 5vw;color:var(--cream);transition:padding .5s}
+.nav:before{content:"";position:absolute;inset:0;background:rgba(42,31,24,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);opacity:0;transition:opacity .5s;z-index:-1}
+.nav.solid:before{opacity:1}
+.nav.solid{padding:.8rem 5vw}
+.brand{display:flex;align-items:center;gap:.7rem;font:400 1.7rem var(--serif);letter-spacing:.04em}
+.brand img{height:34px}.brand em{color:var(--gold)}
+#menu{display:flex;gap:2.2rem;font-size:.9rem}
+#menu a{position:relative;padding:.3rem 0}
+#menu a:after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+#menu a:hover:after{transform:scaleX(1);transform-origin:left}
+.tools{display:flex;align-items:center;gap:1rem}
+.lang button{background:none;border:0;padding:.3rem .45rem;font-size:.78rem;cursor:pointer;opacity:.6;letter-spacing:.08em}
+.lang button[aria-pressed=true]{opacity:1;color:var(--gold)}
+.burger{display:none;background:none;border:0;width:36px;height:36px;position:relative;cursor:pointer}
+.burger i{position:absolute;left:6px;right:6px;height:1px;background:currentColor;transition:.4s}
+.burger i:first-child{top:13px}.burger i:last-child{top:22px}
+.burger[aria-expanded=true] i:first-child{top:18px;transform:rotate(45deg)}
+.burger[aria-expanded=true] i:last-child{top:18px;transform:rotate(-45deg)}
+
+/* buttons */
+.btn{display:inline-block;position:relative;overflow:hidden;background:var(--gold);color:var(--esp);border:1px solid var(--gold);padding:1rem 2.2rem;font-size:.9rem;letter-spacing:.06em;cursor:pointer;transition:color .5s,transform .3s var(--ease);z-index:0}
+.btn:before{content:"";position:absolute;inset:0;background:var(--esp);transform:translateY(101%);transition:transform .5s var(--ease);z-index:-1}
+.btn:after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:shine 4.5s 2s infinite}
+@keyframes shine{0%,60%{left:-80%}100%{left:140%}}
+.btn:hover{color:var(--gold)}.btn:hover:before{transform:none}
+.btn.sm{padding:.6rem 1.3rem;font-size:.8rem}
+.btn.ghost{background:transparent;color:inherit;border-color:rgba(205,170,125,.6)}
+.btn.ghost:before{background:var(--gold)}.btn.ghost:hover{color:var(--esp)}.btn.ghost:after{display:none}
+.dark .btn:before,.hero .btn:before,.nav .btn:before{background:var(--ivory)}
+.cta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;color:var(--cream);background:radial-gradient(ellipse at 70% 20%,#5a4430 0,transparent 55%),radial-gradient(ellipse at 15% 90%,#4a3626 0,transparent 50%),var(--esp);overflow:hidden}
+.phero{min-height:92svh}
+.hero-bg{position:absolute;inset:-6% 0;opacity:.4}
+.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,31,24,.5),rgba(42,31,24,.2) 40%,var(--esp));pointer-events:none}
+.orbs{position:absolute;inset:0;z-index:1;pointer-events:none}
+.orbs i{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(205,170,125,.5),transparent 70%);animation:float 9s ease-in-out infinite}
+.orbs i:nth-child(1){width:260px;height:260px;left:6%;top:18%}
+.orbs i:nth-child(2){width:180px;height:180px;right:9%;top:30%;animation-delay:-3s;animation-duration:11s}
+.orbs i:nth-child(3){width:120px;height:120px;left:42%;bottom:12%;animation-delay:-6s;animation-duration:8s}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(24px,-34px) scale(1.15)}}
+.hero-in{position:relative;z-index:2;padding:8rem 5vw 6rem;max-width:1000px}
+.kicker{font-size:.85rem;letter-spacing:.2em;color:var(--gold);margin-bottom:2rem;opacity:0;animation:up 1.2s .2s var(--ease) forwards}
+.hero h1{font-size:clamp(3.2rem,9.5vw,8rem);font-weight:300;opacity:0;animation:up 1.4s .4s var(--ease) forwards}
+.hero h1 .it{background:linear-gradient(100deg,var(--gold) 30%,#f4e3c6 50%,var(--gold) 70%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:gleam 5s 2s linear infinite}
+@keyframes gleam{to{background-position:-250% 0}}
+.smile{width:min(640px,86%);margin:1.2rem auto 0;display:block;overflow:visible}
+.smile .tooth{fill:rgba(251,248,242,.92);stroke:var(--gold);stroke-width:1;transform-box:fill-box;transform-origin:50% 100%;opacity:0;animation:align 1.8s var(--ease) forwards;animation-delay:calc(.9s + var(--i)*.12s)}
+@keyframes align{from{opacity:0;transform:translate(var(--x),var(--y)) rotate(var(--r))}30%{opacity:1}to{opacity:1;transform:none}}
+.smile .wire{fill:none;stroke:var(--gold);stroke-width:2;stroke-dasharray:1;stroke-dashoffset:1;stroke-linecap:round;animation:draw 2.2s 2.4s var(--ease) forwards}
+.smile .brk{fill:var(--gold);transform-box:fill-box;transform-origin:center;opacity:0;animation:pop .6s var(--ease) forwards;animation-delay:calc(2.4s + var(--i)*.12s)}
+@keyframes pop{from{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1)}}
+@keyframes draw{to{stroke-dashoffset:0}}
+.sub{max-width:52ch;margin:1.8rem auto 0;opacity:0;animation:up 1.2s 2.2s var(--ease) forwards;color:rgba(242,234,221,.8)}
+.chips{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:2.2rem;opacity:0;animation:up 1.2s 2.5s var(--ease) forwards}
+.chips a{border:1px solid rgba(205,170,125,.5);padding:.55rem 1.3rem;font-size:.85rem;transition:background .4s,color .4s,transform .4s var(--ease)}
+.chips a:hover,.chips a.on{background:var(--gold);color:var(--esp);transform:translateY(-3px)}
+.kicker a{border-bottom:1px solid transparent;transition:border-color .3s}.kicker a:hover{border-color:var(--gold)}
+@keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.scroll{position:absolute;bottom:2rem;left:50%;z-index:2;width:1px;height:60px;background:rgba(205,170,125,.3);overflow:hidden}
+.scroll span{display:block;width:1px;height:20px;background:var(--gold);animation:drip 2s infinite}
+@keyframes drip{from{transform:translateY(-20px)}to{transform:translateY(60px)}}
+#bar{position:fixed;top:0;left:0;height:2px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;z-index:60}
+
+/* marquee */
+.marq{background:var(--gold);color:var(--esp);overflow:hidden;white-space:nowrap;padding:.9rem 0;font:italic 400 1.5rem var(--serif)}
+.marq div{display:inline-flex;gap:3rem;animation:slide 28s linear infinite;padding-left:3rem}
+.marq span:after{content:"✦";margin-left:3rem;font-style:normal;font-size:.9rem}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* intro */
+.intro{text-align:center;max-width:780px}
+
+/* image frames */
+.ph{position:relative;overflow:hidden;background:linear-gradient(145deg,#e8dcc8,#d6c3a3 55%,#c9b08a);display:grid;place-items:center;margin:0;aspect-ratio:4/5;transition:transform .5s var(--ease),box-shadow .5s;will-change:transform}
+.ph:before{content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,.55);z-index:1;pointer-events:none;transition:inset .6s var(--ease)}
+.ph:hover:before{inset:22px}
+.ph:hover{box-shadow:0 30px 60px -25px rgba(42,31,24,.5)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.12)}
+.ph b{font:italic 300 1.4rem var(--serif);color:rgba(42,31,24,.45);z-index:0}
+.ph.reveal{clip-path:inset(0 0 100% 0);transition:clip-path 1.4s var(--ease),opacity 1.2s,transform .5s var(--ease),box-shadow .5s;opacity:1;transform:none}
+.ph.reveal.in{clip-path:inset(0)}
+.svc .split{align-items:center}
+.flip .ph{order:2}
+.svc h2{font-size:clamp(2.2rem,4.5vw,3.6rem)}
+.svc h3{font-size:1.7rem;color:var(--gold-d);margin:1.8rem 0 .8rem}
+.num{position:absolute;right:4vw;top:2rem;font:italic 300 clamp(8rem,20vw,16rem)/1 var(--serif);color:var(--gold);opacity:.14;pointer-events:none;animation:float 12s ease-in-out infinite}
+.steps{list-style:none;position:relative;padding-left:1.9rem}
+.steps:before{content:"";position:absolute;left:5px;top:1rem;bottom:1rem;width:1px;background:var(--gold);transform:scaleY(0);transform-origin:top;transition:transform 2s var(--ease)}
+.steps.in:before{transform:none}
+.steps li{position:relative;padding:.5rem 0;opacity:0;transform:translateX(-14px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.steps.in li{opacity:1;transform:none}
+.steps li:before{content:"";position:absolute;left:-1.9rem;top:1.15rem;width:11px;height:11px;border-radius:50%;background:var(--ivory);border:1px solid var(--gold)}
+.steps.in li:before{animation:ping 2.6s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(205,170,125,.6)}70%,100%{box-shadow:0 0 0 12px rgba(205,170,125,0)}}
+.cream .steps li:before{background:var(--cream)}
+.know{margin:1.6rem 0 2rem;padding:1rem 1.3rem;border-left:2px solid var(--gold);background:rgba(205,170,125,.12);font-size:.95rem}
+.know strong{font-weight:500;color:var(--gold-d)}
+
+/* journey */
+.journey{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:4rem;position:relative}
+.journey:before{content:"";position:absolute;left:0;right:0;top:22px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 2.4s var(--ease)}
+.journey.in:before{transform:none}
+.jn{position:relative;padding-top:4rem;opacity:0;transform:translateY(30px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.journey.in .jn{opacity:1;transform:none}
+.jn:before{content:attr(data-n);position:absolute;top:0;left:0;width:46px;height:46px;border-radius:50%;background:var(--esp);border:1px solid var(--gold);color:var(--gold);display:grid;place-items:center;font:400 1.3rem var(--serif);transition:background .4s,color .4s,transform .5s var(--ease)}
+.jn:hover:before{background:var(--gold);color:var(--esp);transform:scale(1.15) rotate(-8deg)}
+.jn h3{font-size:1.7rem;color:var(--gold);margin-bottom:.5rem}
+.jn p{opacity:.8;font-size:.97rem}
+
+/* compare */
+.tw{overflow-x:auto;margin-top:3rem;border:1px solid rgba(42,31,24,.15)}
+table{width:100%;border-collapse:collapse;min-width:680px;background:var(--white)}
+th,td{text-align:left;padding:1.2rem 1.4rem;border-bottom:1px solid rgba(42,31,24,.1);vertical-align:top;font-size:.97rem}
+thead th{font:400 1.6rem var(--serif);color:var(--gold-d);background:var(--cream)}
+tbody th{font-weight:500;font-size:.8rem;letter-spacing:.08em;color:var(--gold-d)}
+tbody tr{transition:background .4s}
+tbody tr:hover{background:rgba(205,170,125,.14)}
+tbody td{transition:padding .4s var(--ease)}
+tbody tr:hover td{padding-left:1.8rem}
+
+/* after */
+.after ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(205,170,125,.25);border:1px solid rgba(205,170,125,.25);margin-top:2rem}
+.after li{background:var(--esp);padding:2.2rem 2rem;font:300 1.35rem/1.35 var(--serif);transition:background .5s,color .5s,transform .5s var(--ease)}
+.after li:hover{background:var(--esp2);color:var(--gold);transform:translateY(-6px)}
+
+/* faq */
+.faq{max-width:860px}
+details{border-bottom:1px solid rgba(42,31,24,.18);padding:1.3rem 0}
+summary{cursor:pointer;font:400 1.6rem/1.2 var(--serif);list-style:none;display:flex;justify-content:space-between;gap:1rem;transition:color .3s}
+summary::-webkit-details-marker{display:none}
+summary:hover{color:var(--gold-d)}
+summary:after{content:"+";color:var(--gold);transition:transform .4s var(--ease)}
+details[open] summary:after{transform:rotate(45deg)}
+details p{padding-top:.8rem;opacity:.8;max-width:65ch;animation:fade .6s}
+@keyframes fade{from{opacity:0;transform:translateY(-6px)}}
+
+.cta-band{text-align:center;overflow:hidden}.cta-band p{opacity:.8;max-width:50ch;margin:0 auto}.cta-band .cta{justify-content:center}
+.cta-band:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;left:50%;top:50%;margin:-260px 0 0 -260px;background:radial-gradient(circle,rgba(205,170,125,.25),transparent 65%);animation:breathe 6s ease-in-out infinite}
+@keyframes breathe{50%{transform:scale(1.35);opacity:.6}}
+.cta-band .wrap{position:relative}
+.addr{margin-top:1rem!important;font-size:.9rem}
+.foot{background:#1d1510;color:rgba(242,234,221,.7);text-align:center;padding:4rem 5vw;display:grid;gap:1rem;font-size:.9rem}
+.foot .brand{justify-content:center;color:var(--cream)}
+.foot a{color:var(--gold);margin-left:1rem}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(40px);transition:opacity 1.2s var(--ease),transform 1.2s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.l{transform:translateX(-50px)}.js .rv.r{transform:translateX(50px)}
+.js .rv.l.in,.js .rv.r.in{transform:none}
+
+@media(max-width:980px){
+ .split,.journey{grid-template-columns:1fr}.journey:before{display:none}
+ .burger{display:block}.nav .btn.sm{display:none}
+ #menu{position:fixed;inset:0;background:var(--esp);flex-direction:column;justify-content:center;align-items:center;gap:1.6rem;font:300 2.4rem var(--serif);transform:translateY(-100%);transition:transform .7s var(--ease),visibility 0s .7s;z-index:-1;visibility:hidden}
+ #menu.open{transform:none;visibility:visible;transition-delay:0s}
+ .flip .ph{order:0}
+}
+@media(max-width:700px){.after ul{grid-template-columns:1fr}.brand{font-size:1.4rem}.tools{gap:.3rem}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+ .kicker,.hero h1,.sub,.chips{opacity:1}.smile .wire{stroke-dashoffset:0}.smile .tooth,.smile .brk{opacity:1}.steps li,.jn{opacity:1;transform:none}.steps:before,.journey:before{transform:none}.ph.reveal{clip-path:none}}
+</style>
+</head>
+<body>
+<div id="bar" aria-hidden="true"></div>
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Dea Dent"><img src="images/logo.png" alt="" onerror="this.remove()"><span>Dea <em>Dent</em></span></a>
+  <nav id="menu" aria-label="Main"><a href="#fixed" data-i="i21"></a><a href="#mobile" data-i="i22"></a><a href="#invisalign" data-i="i23"></a><a href="#faq" data-i="lbl_faq"></a><a href="#contact" data-i="n_contact"></a></nav>
+  <div class="tools">
+    <div class="lang" role="group" aria-label="Language"><button data-lang="sq" aria-pressed="true">SQ</button><button data-lang="mk" aria-pressed="false">MK</button><button data-lang="en" aria-pressed="false">EN</button></div>
+    <a class="btn sm" href="tel:+38942550590" data-i="n_book"></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero phero" id="top">
+  <div class="hero-bg"><img referrerpolicy="no-referrer" src="images/treatment2-hero.jpg" alt="" fetchpriority="high" onerror="this.remove()"></div><!-- REPLACE: images/treatment2-hero.jpg -->
+  <div class="orbs" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="hero-in">
+    <p class="kicker"><a href="index.html" data-i="bc"></a> &nbsp;/&nbsp; <span data-i="p_t"></span></p>
+    <h1><span class="it" data-i="p_t"></span></h1>
+    <!-- Teeth that glide into line, then the wire and brackets appear -->
+    <svg class="smile" viewBox="0 0 600 130" aria-hidden="true">
+      <g>
+        <rect class="tooth" style="--i:0;--x:-30px;--y:-26px;--r:-24deg" x="30" y="30" width="50" height="70" rx="22"/>
+        <rect class="tooth" style="--i:1;--x:18px;--y:30px;--r:18deg" x="105" y="26" width="52" height="76" rx="22"/>
+        <rect class="tooth" style="--i:2;--x:-12px;--y:-34px;--r:-14deg" x="182" y="22" width="56" height="82" rx="24"/>
+        <rect class="tooth" style="--i:3;--x:14px;--y:-30px;--r:16deg" x="262" y="22" width="56" height="82" rx="24"/>
+        <rect class="tooth" style="--i:4;--x:-18px;--y:34px;--r:-20deg" x="343" y="26" width="52" height="76" rx="22"/>
+        <rect class="tooth" style="--i:5;--x:30px;--y:-22px;--r:26deg" x="420" y="30" width="50" height="70" rx="22"/>
+        <rect class="tooth" style="--i:6;--x:36px;--y:26px;--r:22deg" x="495" y="38" width="46" height="62" rx="20"/>
+      </g>
+      <path class="wire" pathLength="1" d="M42 58 H560"/>
+      <circle class="brk" style="--i:0" cx="55" cy="58" r="6"/><circle class="brk" style="--i:1" cx="131" cy="58" r="6"/><circle class="brk" style="--i:2" cx="210" cy="58" r="6"/><circle class="brk" style="--i:3" cx="290" cy="58" r="6"/><circle class="brk" style="--i:4" cx="369" cy="58" r="6"/><circle class="brk" style="--i:5" cx="445" cy="58" r="6"/><circle class="brk" style="--i:6" cx="518" cy="58" r="6"/>
+    </svg>
+    <p class="sub" data-i="p_sub"></p>
+    <nav class="chips" aria-label="Sections"><a href="#fixed" data-i="i21"></a><a href="#mobile" data-i="i22"></a><a href="#invisalign" data-i="i23"></a></nav>
+  </div>
+  <div class="scroll" aria-hidden="true"><span></span></div>
+</section>
+
+<div class="marq" aria-hidden="true"><div><span data-i="i21"></span><span data-i="i22"></span><span data-i="i23"></span><span data-i="i21"></span><span data-i="i22"></span><span data-i="i23"></span><span data-i="i21"></span><span data-i="i22"></span><span data-i="i23"></span><span data-i="i21"></span><span data-i="i22"></span><span data-i="i23"></span></div></div>
+
+<section class="sec ivory"><div class="wrap intro rv"><h2 data-i="in_t"></h2><p class="lead" data-i="in_p"></p></div></section>
+
+<section class="sec cream svc" id="fixed"><span class="num" aria-hidden="true">01</span><div class="wrap split">
+  <figure class="ph nl reveal"><img referrerpolicy="no-referrer" src="https://i.imgur.com/6PHapFc.jpeg" alt="" loading="lazy" onerror="this.remove()"><b data-i="i21"></b></figure><!-- REPLACE: images/treatment2-fixed.jpg -->
+  <div><h2 class="rv r" data-i="i21"></h2><p class="lead rv" data-i="f_p"></p>
+    <h3 class="rv" data-i="lbl_steps"></h3>
+    <ol class="steps rv"><li data-i="f_s1"></li><li data-i="f_s2"></li><li data-i="f_s3"></li><li data-i="f_s4"></li></ol>
+    <p class="know rv"><strong data-i="lbl_know"></strong> <span data-i="f_k"></span></p>
+    <a class="btn rv" href="tel:+38942550590" data-i="n_book"></a></div>
+</div></section>
+
+<section class="sec ivory svc flip" id="mobile"><span class="num" aria-hidden="true">02</span><div class="wrap split">
+  <figure class="ph nl reveal"><img referrerpolicy="no-referrer" src="https://cdn.unitekcollege.edu/unitekcollege/2022/06/shutterstock_1877696449-scaled.jpg" alt="" loading="lazy" onerror="this.remove()"><b data-i="i22"></b></figure><!-- REPLACE: images/treatment2-mobile.jpg -->
+  <div><h2 class="rv l" data-i="i22"></h2><p class="lead rv" data-i="m_p"></p>
+    <h3 class="rv" data-i="lbl_steps"></h3>
+    <ol class="steps rv"><li data-i="m_s1"></li><li data-i="m_s2"></li><li data-i="m_s3"></li><li data-i="m_s4"></li></ol>
+    <p class="know rv"><strong data-i="lbl_know"></strong> <span data-i="m_k"></span></p>
+    <a class="btn rv" href="tel:+38942550590" data-i="n_book"></a></div>
+</div></section>
+
+<section class="sec cream svc" id="invisalign"><span class="num" aria-hidden="true">03</span><div class="wrap split">
+  <figure class="ph nl reveal"><img referrerpolicy="no-referrer" src="https://i.imgur.com/a3SRvsP.jpeg" alt="" loading="lazy" onerror="this.remove()"><b data-i="i23"></b></figure><!-- REPLACE: images/treatment2-invisalign.jpg -->
+  <div><h2 class="rv r" data-i="i23"></h2><p class="lead rv" data-i="v_p"></p>
+    <h3 class="rv" data-i="lbl_steps"></h3>
+    <ol class="steps rv"><li data-i="v_s1"></li><li data-i="v_s2"></li><li data-i="v_s3"></li><li data-i="v_s4"></li></ol>
+    <p class="know rv"><strong data-i="lbl_know"></strong> <span data-i="v_k"></span></p>
+    <a class="btn rv" href="tel:+38942550590" data-i="n_book"></a></div>
+</div></section>
+
+<section class="sec ivory" id="compare"><div class="wrap"><h2 class="rv" data-i="cmp_t"></h2>
+  <div class="tw rv"><table>
+    <thead><tr><th></th><th data-i="i21"></th><th data-i="i22"></th><th data-i="i23"></th></tr></thead>
+    <tbody>
+      <tr><th data-i="c_r1"></th><td data-i="c_11"></td><td data-i="c_12"></td><td data-i="c_13"></td></tr>
+      <tr><th data-i="c_r2"></th><td data-i="c_21"></td><td data-i="c_22"></td><td data-i="c_23"></td></tr>
+      <tr><th data-i="c_r3"></th><td data-i="c_31"></td><td data-i="c_32"></td><td data-i="c_33"></td></tr>
+    </tbody></table></div></div></section>
+
+<section class="sec dark"><div class="wrap"><h2 class="rv" data-i="j_t"></h2>
+  <div class="journey" id="journey">
+    <div class="jn" data-n="1" style="transition-delay:.2s"><h3 data-i="j1"></h3><p data-i="j1p"></p></div>
+    <div class="jn" data-n="2" style="transition-delay:.6s"><h3 data-i="j2"></h3><p data-i="j2p"></p></div>
+    <div class="jn" data-n="3" style="transition-delay:1s"><h3 data-i="j3"></h3><p data-i="j3p"></p></div>
+    <div class="jn" data-n="4" style="transition-delay:1.4s"><h3 data-i="j4"></h3><p data-i="j4p"></p></div>
+  </div></div></section>
+
+<section class="sec cream after" style="background:var(--esp);color:var(--cream);padding-top:0"><div class="wrap"><h2 class="rv" data-i="af_t"></h2>
+  <ul class="rv"><li data-i="af_1"></li><li data-i="af_2"></li><li data-i="af_3"></li></ul></div></section>
+
+<section class="sec ivory" id="faq-s"><div class="wrap faq" id="faq"><h2 class="rv" data-i="lbl_faq"></h2>
+  <details class="rv"><summary data-i="q1"></summary><p data-i="a1"></p></details>
+  <details class="rv"><summary data-i="q2"></summary><p data-i="a2"></p></details>
+  <details class="rv"><summary data-i="q3"></summary><p data-i="a3"></p></details>
+  <p class="note rv" data-i="disc"></p></div></section>
+
+<section class="sec dark cta-band" id="contact"><div class="wrap rv"><h2 data-i="cta_t"></h2><p data-i="cta_p"></p><p class="addr">Str. Ilindenska 144a/1, Gostivar · +389 (0)42 550 590 · dr.zumri@gmail.com</p>
+  <div class="cta"><a class="btn" href="tel:+38942550590" data-i="n_book"></a><a class="btn ghost" href="mailto:dr.zumri@gmail.com?subject=Dea%20Dent">Email</a><a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Ilindenska+144a+Gostivar+North+Macedonia" data-i="k_dir"></a></div></div></section>
+</main>
+
+<footer class="foot">
+  <span class="brand"><span>Dea <em>Dent</em></span></span>
+  <p>Str. Ilindenska 144a/1, Gostivar · <a href="tel:+38942550590" style="margin:0">+389 (0)42 550 590</a> · <a href="mailto:dr.zumri@gmail.com" style="margin:0">dr.zumri@gmail.com</a></p>
+  <p>© <span id="yr"></span> Dea Dent. <span data-i="rights"></span> <a href="#main" data-i="top"></a></p>
+</footer>
+<script>
+'use strict';
+/* General information only. Edit the text below to match the clinic's real protocols. */
+const T={
+sq:{n_contact:"Kontakti",n_book:"Cakto vizitë",bc:"Trajtimet",
+p_t:"Ortodonci",p_sub:"Dhëmbë të drejtë, kafshim i shëndetshëm dhe një buzëqeshje për të cilën krenoheni.",
+i21:"Aparate fikse",i22:"Aparate mobile",i23:"Invisalign",
+in_t:"Një buzëqeshje e drejtë, hap pas hapi",in_p:"Ortodoncia nuk është vetëm estetikë: dhëmbët e rregulluar pastrohen më lehtë dhe kafshimi bëhet më i qëndrueshëm. Mjeku zgjedh me ju metodën që i përshtatet rastit dhe stilit tuaj të jetesës.",
+lbl_steps:"Si ecën trajtimi",lbl_know:"Mirë është ta dini:",lbl_faq:"Pyetje të shpeshta",
+f_p:"Aparatet fikse përbëhen nga brekete të vogla të ngjitura në dhëmbë dhe të lidhura me një tel, që i drejton dhëmbët butësisht drejt pozicionit të duhur.",
+f_s1:"Ekzaminim, radiografi, fotografi dhe regjistrim i dhëmbëve për planin e trajtimit",f_s2:"Ngjitja e brekeve në dhëmbë dhe vendosja e telit",f_s3:"Kontrolle të rregullta për rregullimin e aparatit",f_s4:"Heqja e aparatit dhe vendosja e mbajtësve (retainer)",
+f_k:"Në ditët e para pas vendosjes ose rregullimit mund të ndjeni presion ose ndjeshmëri. Higjiena kërkon kujdes shtesë, dhe ushqimet shumë të forta ose ngjitëse duhen shmangur.",
+m_p:"Aparatet mobile bëhen nga akrilik dhe tela dhe mund të hiqen për ngrënie e pastrim. Përdoren shpesh te fëmijët në rritje për korrigjime të thjeshta dhe për të udhëhequr zhvillimin e nofullave.",
+m_s1:"Ekzaminim dhe vlerësim i rritjes dhe i pozicionit të dhëmbëve",m_s2:"Marrja e masave dhe prodhimi i aparatit sipas masës",m_s3:"Vendosja dhe udhëzime të qarta për orët e përdorimit",m_s4:"Kontrolle periodike dhe rregullime sipas nevojës",
+m_k:"Rezultati varet nga përdorimi sipas udhëzimeve. Ky aparat nuk i përshtatet çdo rasti të ndërlikuar; mjeku do t'ju thotë nëse është zgjidhja e duhur.",
+v_p:"Invisalign përdor një seri kapash transparente, të porositura sipas masës, që i lëvizin dhëmbët hap pas hapi. Hiqen kur hani dhe larë dhëmbët dhe janë pothuajse të padukshme.",
+v_s1:"Skanim dixhital i dhëmbëve dhe plani virtual i trajtimit",v_s2:"Marrja e serisë së kapave të personalizuara",v_s3:"Ndërrimi i kapës në kohën e caktuar nga mjeku dhe mbajtja prej rreth 20–22 orësh në ditë",v_s4:"Kontrolle periodike dhe mbajtës në fund të trajtimit",
+v_k:"Mjeku vlerëson së pari nëse rasti juaj është i përshtatshëm. Ndonjëherë përdoren pika të vogla me ngjyrën e dhëmbit për të ndihmuar lëvizjen. Rezultati varet nga mbajtja e rregullt e kapave.",
+cmp_t:"Cila është më e përshtatshme për ju?",c_r1:"PAMJA",c_r2:"E LEVIZSHME",c_r3:"E PËRSHTATSHME PËR",
+c_11:"Brekete dhe tel të ngjitur në dhëmbë",c_12:"Pllakë me tela, që e hiqni vetë",c_13:"Kapa transparente, diskrete",
+c_21:"Jo, mbetet në dhëmbë gjatë gjithë trajtimit",c_22:"Po",c_23:"Po, por mbahet rreth 20–22 orë në ditë",
+c_31:"Raste të thjeshta dhe të ndërlikuara, të rinj dhe të rritur",c_32:"Fëmijë në rritje dhe korrigjime të thjeshta",c_33:"Raste të lehta deri mesatare, sipas vlerësimit të mjekut",
+j_t:"Rruga drejt buzëqeshjes",j1:"Konsultë",j1p:"Ekzaminim, radiografi dhe bisedë për pritshmëritë tuaja.",j2:"Plani",j2p:"Mjeku propozon metodën, kohëzgjatjen e përafërt dhe hapat.",j3:"Trajtimi",j3p:"Kontrolle të rregullta që dhëmbët të lëvizin sigurt dhe butë.",j4:"Mbajtja",j4p:"Mbajtësit e ruajnë rezultatin pasi të përfundojë trajtimi.",
+af_t:"Gjatë dhe pas trajtimit",af_1:"Lani dhëmbët pas çdo vakti dhe përdorni furça ndërdhëmbore",af_2:"Shmangni ushqimet shumë të forta e ngjitëse nëse keni aparat fiks",af_3:"Mbani mbajtësit sipas udhëzimeve dhe vazhdoni kontrollet",
+q1:"A dhemb trajtimi ortodontik?",a1:"Zakonisht nuk dhemb, por në ditët e para pas vendosjes ose rregullimit mund të ndjeni presion e ndjeshmëri që kalon shpejt.",
+q2:"Sa zgjat trajtimi?",a2:"Varet nga rasti: nga disa muaj deri në disa vjet. Mjeku jep një vlerësim të përafërt pas ekzaminimit.",
+q3:"A mund të trajtohem edhe si i rritur?",a3:"Po. Të rriturit mund të bëjnë trajtim ortodontik, me kusht që dhëmbët dhe mishrat të jenë të shëndetshëm. Mjeku do ta vlerësojë këtë.",
+disc:"Informacion i përgjithshëm. Plani përfundimtar caktohet vetëm pas ekzaminimit.",
+cta_t:"Gati për një buzëqeshje të drejtë?",cta_p:"Cakto një konsultë dhe mjeku do t'ju këshillojë opsionin më të përshtatshëm.",k_dir:"Merr drejtimet",rights:"Të gjitha të drejtat e rezervuara.",top:"Kthehu lart"},
+mk:{n_contact:"Контакт",n_book:"Закажи термин",bc:"Третмани",
+p_t:"Ортодонција",p_sub:"Прави заби, здрав загриз и осмев со кој ќе се гордеете.",
+i21:"Фиксни апчиња",i22:"Мобилни апчиња",i23:"Invisalign",
+in_t:"Прав осмев, чекор по чекор",in_p:"Ортодонцијата не е само естетика: наместените заби полесно се чистат, а загризот е постабилен. Лекарот со вас го избира методот што одговара на случајот и начинот на живот.",
+lbl_steps:"Како тече третманот",lbl_know:"Добро е да знаете:",lbl_faq:"Често поставувани прашања",
+f_p:"Фиксните апчиња се состојат од мали брекети залепени на забите и поврзани со жица што нежно ги води забите кон правилната позиција.",
+f_s1:"Преглед, рендгенски снимки, фотографии и отисоци на забите за планот на третман",f_s2:"Лепење на брекетите на забите и поставување на жицата",f_s3:"Редовни контроли за дотерување на апчето",f_s4:"Симнување на апчето и поставување ретејнери",
+f_k:"Во првите денови по поставувањето или дотерувањето можен е притисок или чувствителност. Хигиената бара дополнителна грижа, а многу тврда или лепливa храна треба да се избегнува.",
+m_p:"Мобилните апчиња се изработени од акрилат и жици и може да се вадат за јадење и чистење. Често се користат кај деца во раст за едноставни корекции и за водење на развојот на вилиците.",
+m_s1:"Преглед и проценка на растот и положбата на забите",m_s2:"Земање мерки и изработка на апчето по мерка",m_s3:"Поставување и јасни упатства за часовите на носење",m_s4:"Периодични контроли и дотерување по потреба",
+m_k:"Резултатот зависи од носење според упатствата. Ова апче не одговара на секој сложен случај; лекарот ќе ви каже дали е вистинското решение.",
+v_p:"Invisalign користи серија проѕирни шини изработени по мерка што ги движат забите чекор по чекор. Се вадат при јадење и миење заби и се скоро невидливи.",
+v_s1:"Дигитално скенирање на забите и виртуелен план на третман",v_s2:"Добивање на серијата персонализирани шини",v_s3:"Менување на шината според времето што го одредува лекарот и носење околу 20–22 часа дневно",v_s4:"Периодични контроли и ретејнер на крајот од третманот",
+v_k:"Лекарот прво проценува дали вашиот случај е соодветен. Понекогаш се користат мали испакнатини во боја на забот што помагаат при движењето. Резултатот зависи од редовното носење на шините.",
+cmp_t:"Кое е најсоодветно за вас?",c_r1:"ИЗГЛЕД",c_r2:"ВАДЛИВО",c_r3:"СООДВЕТНО ЗА",
+c_11:"Брекети и жица залепени на забите",c_12:"Плочка со жици што ја вадите сами",c_13:"Проѕирни шини, дискретни",
+c_21:"Не, останува на забите во текот на целиот третман",c_22:"Да",c_23:"Да, но се носи околу 20–22 часа дневно",
+c_31:"Едноставни и сложени случаи, млади и возрасни",c_32:"Деца во раст и едноставни корекции",c_33:"Лесни до умерени случаи, според проценка на лекарот",
+j_t:"Патот до осмевот",j1:"Консултација",j1p:"Преглед, рендгенски снимки и разговор за вашите очекувања.",j2:"План",j2p:"Лекарот го предлага методот, приближното времетраење и чекорите.",j3:"Третман",j3p:"Редовни контроли за забите да се движат безбедно и нежно.",j4:"Задржување",j4p:"Ретејнерите го чуваат резултатот откако третманот ќе заврши.",
+af_t:"За време и по третманот",af_1:"Мијте ги забите по секој оброк и користете интердентални четкички",af_2:"Избегнувајте многу тврда и лепливa храна ако носите фиксно апче",af_3:"Носете ретејнери според упатствата и продолжете со контролите",
+q1:"Дали боли ортодонтскиот третман?",a1:"Обично не боли, но во првите денови по поставувањето или дотерувањето можен е притисок и чувствителност што брзо поминува.",
+q2:"Колку трае третманот?",a2:"Зависи од случајот: од неколку месеци до неколку години. Лекарот дава приближна проценка по прегледот.",
+q3:"Може ли да се лекувам и како возрасен?",a3:"Да. Возрасните можат да имаат ортодонтски третман, под услов забите и непцата да се здрави. Лекарот тоа ќе го процени.",
+disc:"Општи информации. Конечниот план се одредува дури по преглед.",
+cta_t:"Подготвени за прав осмев?",cta_p:"Закажете консултација и лекарот ќе ви ја препорача најсоодветната опција.",k_dir:"Добиј насоки",rights:"Сите права се задржани.",top:"Назад горе"},
+en:{n_contact:"Contact",n_book:"Book a visit",bc:"Treatments",
+p_t:"Orthodontics",p_sub:"Straight teeth, a healthy bite and a smile you can be proud of.",
+i21:"Fixed braces",i22:"Removable appliances",i23:"Invisalign",
+in_t:"A straighter smile, step by step",in_p:"Orthodontics is not only about looks: aligned teeth are easier to clean and the bite becomes more stable. The doctor chooses with you the method that suits your case and lifestyle.",
+lbl_steps:"How treatment works",lbl_know:"Good to know:",lbl_faq:"Frequently asked questions",
+f_p:"Fixed braces consist of small brackets bonded to the teeth and joined by an archwire that gently guides the teeth into the right position.",
+f_s1:"Examination, X-rays, photos and records of your teeth to plan treatment",f_s2:"Bonding of the brackets and placement of the wire",f_s3:"Regular check-ups to adjust the braces",f_s4:"Removal of the braces and fitting of retainers",
+f_k:"In the first days after fitting or an adjustment you may feel pressure or soreness. Hygiene needs extra care, and very hard or sticky foods should be avoided.",
+m_p:"Removable appliances are made of acrylic and wires and can be taken out for eating and cleaning. They are often used in growing children for simple corrections and to guide jaw development.",
+m_s1:"Examination and assessment of growth and tooth position",m_s2:"Impressions and custom-making of the appliance",m_s3:"Fitting and clear instructions on wearing hours",m_s4:"Periodic check-ups and adjustments as needed",
+m_k:"Results depend on wearing it as instructed. This appliance is not suitable for every complex case; the doctor will tell you whether it is the right solution.",
+v_p:"Invisalign uses a series of clear, custom-made aligners that move your teeth step by step. They are taken out for eating and brushing and are almost invisible.",
+v_s1:"Digital scan of your teeth and a virtual treatment plan",v_s2:"Receiving your series of personalised aligners",v_s3:"Switching aligners on the schedule the doctor sets and wearing them about 20–22 hours a day",v_s4:"Periodic check-ups and retainers at the end of treatment",
+v_k:"The doctor first assesses whether your case is suitable. Small tooth-coloured attachments are sometimes used to help movement. Results depend on wearing the aligners consistently.",
+cmp_t:"Which is right for you?",c_r1:"LOOK",c_r2:"REMOVABLE",c_r3:"BEST SUITED FOR",
+c_11:"Brackets and wire bonded to the teeth",c_12:"A plate with wires that you take out yourself",c_13:"Clear, discreet aligners",
+c_21:"No, stays on the teeth throughout treatment",c_22:"Yes",c_23:"Yes, but worn about 20–22 hours a day",
+c_31:"Simple and complex cases, teens and adults",c_32:"Growing children and simple corrections",c_33:"Mild to moderate cases, as assessed by the doctor",
+j_t:"The road to your smile",j1:"Consultation",j1p:"Examination, X-rays and a talk about your expectations.",j2:"Plan",j2p:"The doctor proposes the method, approximate duration and steps.",j3:"Treatment",j3p:"Regular check-ups so teeth move safely and gently.",j4:"Retention",j4p:"Retainers keep the result once treatment is finished.",
+af_t:"During and after treatment",af_1:"Brush after every meal and use interdental brushes",af_2:"Avoid very hard and sticky foods if you have fixed braces",af_3:"Wear retainers as instructed and keep up your check-ups",
+q1:"Is orthodontic treatment painful?",a1:"It usually is not, but in the first days after fitting or an adjustment you may feel pressure and soreness that soon passes.",
+q2:"How long does treatment take?",a2:"It depends on the case: from several months to a few years. The doctor gives an approximate estimate after the examination.",
+q3:"Can I have treatment as an adult?",a3:"Yes. Adults can have orthodontic treatment as long as teeth and gums are healthy. The doctor will assess this.",
+disc:"General information. The final plan is set only after an examination.",
+cta_t:"Ready for a straighter smile?",cta_p:"Book a consultation and the doctor will recommend the most suitable option.",k_dir:"Get directions",rights:"All rights reserved.",top:"Back to top"}
+};
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+document.documentElement.classList.add('js');
+let lang='sq';try{lang=localStorage.getItem('dd-lang')||'sq'}catch(e){}
+if(!T[lang])lang='sq';
+function setLang(l){
+  try{localStorage.setItem('dd-lang',l)}catch(e){}
+  document.documentElement.lang=l;
+  $$('[data-i]').forEach(el=>{const v=T[l][el.dataset.i];if(v)el.textContent=v});
+  $$('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===l));
+  document.title=T[l].p_t+' | Dea Dent';
+}
+setLang(lang);
+$$('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+
+const nav=$('#nav'),bar=$('#bar'),burger=$('#burger'),menu=$('#menu'),bg=$('.hero-bg');
+const onScroll=()=>{
+  nav.classList.toggle('solid',scrollY>60);
+  const max=document.documentElement.scrollHeight-innerHeight;bar.style.transform=`scaleX(${max>0?scrollY/max:0})`;
+  if(bg&&scrollY<innerHeight)bg.style.transform=`translateY(${scrollY*.25}px)`;
+  $$('.svc .ph img').forEach(i=>{const r=i.parentElement.getBoundingClientRect();
+    if(r.bottom>0&&r.top<innerHeight)i.style.transform=`scale(1.12) translateY(${(r.top-innerHeight/2)*-.04}px)`});
+  $$('.num').forEach(n=>{const r=n.parentElement.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight)n.style.translate=`0 ${(r.top-innerHeight/2)*.08}px`});
+};
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+const toggle=o=>{menu.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''};
+burger.addEventListener('click',()=>toggle(!menu.classList.contains('open')));
+$$('#menu a').forEach(a=>a.addEventListener('click',()=>toggle(false)));
+
+const io=window.IntersectionObserver?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15}):{observe:el=>el.classList.add('in'),unobserve(){}};
+$$('.rv,.reveal,.journey').forEach((el,i)=>{if(el.classList.contains('rv'))el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+/* failsafe: never leave content hidden */
+setTimeout(()=>$$('.rv:not(.in),.reveal:not(.in),.journey:not(.in)').forEach(el=>{const r=el.getBoundingClientRect();if(r.top<innerHeight*1.1)el.classList.add('in')}),1500);
+$$('.steps li').forEach((li,i)=>{li.style.transitionDelay=(i%4)*140+'ms'});
+$$('.steps').forEach(s=>io.observe(s));
+
+const chips=$$('.chips a'),so=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting)chips.forEach(c=>c.classList.toggle('on',c.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-40% 0px -50% 0px'});
+$$('.svc').forEach(s=>so.observe(s));
+
+/* 3D tilt on images + magnetic buttons (mouse devices only) */
+if(matchMedia('(hover:hover) and (prefers-reduced-motion:no-preference)').matches){
+  $$('.svc .ph').forEach(f=>{
+    f.addEventListener('mousemove',e=>{const r=f.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      f.style.transform=`perspective(900px) rotateY(${x*8}deg) rotateX(${-y*8}deg) scale(1.02)`});
+    f.addEventListener('mouseleave',()=>{f.style.transform=''});
+  });
+  $$('.btn').forEach(b=>{
+    b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();
+      b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.15}px,${(e.clientY-r.top-r.height/2)*.25}px)`});
+    b.addEventListener('mouseleave',()=>{b.style.transform=''});
+  });
+}
+$('#yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
