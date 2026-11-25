@@ -213,6 +213,15 @@ h2{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:1.5rem}
 .tc li:hover{padding-left:.6rem;color:var(--gold)}
 .tc a{font-size:.85rem;border-bottom:1px solid transparent;align-self:flex-start;transition:.4s}
 .tc:hover a{border-color:var(--gold);color:var(--gold)}
+.brand-subtitle {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 2px;
+  opacity: 0.7;
+}
 
 
 .show{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(150px,20vw,260px);gap:1rem;margin-top:3rem}
@@ -338,8 +347,12 @@ dd a:hover{color:var(--gold-d)}
 <header class="nav" id="nav">
   <a class="brand" href="#top" aria-label="Dea Dent">
     <img src="https://i.imgur.com/Zj3JQW6.png" alt="" onerror="this.remove()">
-    <span>Dea <em>Dent</em></span>
+    <span>
+      Dea <em>Dent</em>
+      <small class="brand-subtitle">Dental Clinic</small>
+    </span>
   </a>
+
   <nav id="menu" aria-label="Main">
     <a href="#about" data-i="n_about">Klinika</a>
     <a href="#doctor" data-i="n_doc">Doktori</a>
@@ -347,15 +360,22 @@ dd a:hover{color:var(--gold-d)}
     <a href="#gallery" data-i="n_gal">Galeria</a>
     <a href="#contact" data-i="n_contact">Kontakti</a>
   </nav>
+
   <div class="tools">
     <div class="lang" role="group" aria-label="Language">
-      <button data-lang="sq" aria-pressed="true">SQ</button><button data-lang="mk" aria-pressed="false">MK</button><button data-lang="en" aria-pressed="false">EN</button>
+      <button data-lang="sq" aria-pressed="true">SQ</button>
+      <button data-lang="mk" aria-pressed="false">MK</button>
+      <button data-lang="en" aria-pressed="false">EN</button>
     </div>
+
     <a class="btn sm" href="#book" data-i="n_book">Cakto vizitë</a>
-    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <i></i>
+      <i></i>
+    </button>
   </div>
 </header>
-
 
 <section class="hero" id="top">
   <div class="hero-bg">
@@ -448,13 +468,61 @@ dd a:hover{color:var(--gold-d)}
 </section>
 
 
+
 <section class="sec dark" id="treatments">
   <div class="wrap">
     <h2 class="rv" data-i="t_t">Trajtimet</h2>
-    <div class="tgrid"><article class="tc rv"><h3 data-i="t1"></h3><ul><li data-i="i11"></li><li data-i="i12"></li><li data-i="i13"></li></ul><a href="#book" data-service="t1" data-i="t_ask"></a></article><article class="tc rv"><h3 data-i="t2"></h3><ul><li data-i="i21"></li><li data-i="i22"></li><li data-i="i23"></li></ul><a href="#book" data-service="t2" data-i="t_ask"></a></article><article class="tc rv"><h3 data-i="t3"></h3><ul><li data-i="i31"></li><li data-i="i32"></li><li data-i="i33"></li><li data-i="i34"></li></ul><a href="#book" data-service="t3" data-i="t_ask"></a></article><article class="tc rv"><h3 data-i="t4"></h3><ul><li data-i="i41"></li><li data-i="i42"></li></ul><a href="#book" data-service="t4" data-i="t_ask"></a></article></div>
-    <p class="note" data-i="t_note">Lista e trajtimeve është orientuese dhe do të përditësohet nga klinika.</p>
+
+    <div class="tgrid">
+
+      <a href="treatment1.html" class="tc rv treatment-link">
+        <h3 data-i="t1"></h3>
+        <ul>
+          <li data-i="i11"></li>
+          <li data-i="i12"></li>
+          <li data-i="i13"></li>
+        </ul>
+        <span class="t-ask" data-i="t_ask">Mëso më shumë →</span>
+      </a>
+
+      <a href="treatment2.html" class="tc rv treatment-link">
+        <h3 data-i="t2"></h3>
+        <ul>
+          <li data-i="i21"></li>
+          <li data-i="i22"></li>
+          <li data-i="i23"></li>
+        </ul>
+        <span class="t-ask" data-i="t_ask">Mëso më shumë →</span>
+      </a>
+
+      <a href="treatment3.html" class="tc rv treatment-link">
+        <h3 data-i="t3"></h3>
+        <ul>
+          <li data-i="i31"></li>
+          <li data-i="i32"></li>
+          <li data-i="i33"></li>
+          <li data-i="i34"></li>
+        </ul>
+        <span class="t-ask" data-i="t_ask">Mëso më shumë →</span>
+      </a>
+
+      <a href="treatment4.html" class="tc rv treatment-link">
+        <h3 data-i="t4"></h3>
+        <ul>
+          <li data-i="i41"></li>
+          <li data-i="i42"></li>
+        </ul>
+        <span class="t-ask" data-i="t_ask">Mëso më shumë →</span>
+      </a>
+
+    </div>
+
+    <p class="note" data-i="t_note">
+      Lista e trajtimeve është orientuese dhe do të përditësohet nga klinika.
+    </p>
   </div>
 </section>
+
 
 <section class="orbit" id="orbit" aria-hidden="true">
   <svg viewBox="0 0 760 440" role="presentation">
